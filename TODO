@@ -1,0 +1,28 @@
+TODO: Design the menu app. App that will host the menu items.
+TODO: Load real product in the database
+TODO: In the home page, in the menu, whhen there is a caetgory it shows its subcategories when you hover over it but the is no link to the category itself. Make it a link.
+TODO: Add RFC to customer
+TODO: Create about us page
+TODO: Create contact page
+TODO: What is the max-widht that the template uses
+
+
+
+
+DONE: setup test oscar environment
+DONE: remove "catalogue" from URL. http://127.0.0.1/" should be the main URL
+DONE: read SOLR documentation or follow tutorial
+DONE: Load sample data
+DONE: change database to postgresql
+DONE: Setup oscar/haystack to work with solr
+DONE: select template to use
+DONE: install the templates as tester pages
+DONE: Study oscar's original templates
+DONE: separate the template by sections (use include to build it)
+DONE: fix template to load assets correctly
+DONE: Load shop tagline from settings
+DONE: change main color from yellow to blue. CSS variable my-color in theme.css changes the main color of the web app.
+DONE: Add business information to settings and create context processor to make this information available to all templates
+DONE: Fix header to load static files correctly
+DONE: Remove currency drop down, wont use
+DONE: Change logo from side/hambuguer menu
