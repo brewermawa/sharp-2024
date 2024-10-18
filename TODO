@@ -1,6 +1,6 @@
 TODO: Design the menu app. App that will host the menu items.
 TODO: Load real product in the database
-TODO: In the home page, in the menu, whhen there is a caetgory it shows its subcategories when you hover over it but the is no link to the category itself. Make it a link.
+
 TODO: Add RFC to customer
 TODO: Create about us page
 TODO: Create contact page
@@ -26,3 +26,4 @@ DONE: Add business information to settings and create context processor to make 
 DONE: Fix header to load static files correctly
 DONE: Remove currency drop down, wont use
 DONE: Change logo from side/hambuguer menu
+DONE: In the home page, in the menu, whhen there is a caetgory it shows its subcategories when you hover over it but the is no link to the category itself. Make it a link.

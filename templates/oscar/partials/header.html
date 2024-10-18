@@ -409,7 +409,8 @@
                                         </li>
                                         {% elif option.category %}
                                             <li class="nav-item hs-has-sub-menu u-header__nav-item" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
-                                            <a id="blogMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">{{ option.category }}</a>
+                                            {% comment %} <a id="blogMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">{{ option.category }}</a> {% endcomment %}
+                                            <a id="blogMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="{{ option.category.get_absolute_url }}" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">{{ option.category }}</a>
                                             
                                             <ul id="blogSubMenu" class="hs-sub-menu u-header__sub-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
                                                 {% for child_category in option.category.get_descendants %}
