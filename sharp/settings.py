@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 from oscar.defaults import *
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -64,7 +65,8 @@ INSTALLED_APPS = [
     "oscar.apps.search.apps.SearchConfig",
     "oscar.apps.voucher.apps.VoucherConfig",
     "oscar.apps.wishlists.apps.WishlistsConfig",
-    "oscar.apps.dashboard.apps.DashboardConfig",
+    #"oscar.apps.dashboard.apps.DashboardConfig",
+    "apps.dashboard.apps.DashboardConfig",
     "oscar.apps.dashboard.reports.apps.ReportsDashboardConfig",
     "oscar.apps.dashboard.users.apps.UsersDashboardConfig",
     "oscar.apps.dashboard.orders.apps.OrdersDashboardConfig",
@@ -235,3 +237,15 @@ BUSINESS_CODIGO_POSTAL = "66250"
 BUSINESS_TELEFONO = "(81)1477-1790"
 BUSINESS_EMAIL = "soporte@bi-tecnologia.com"
 BUSINESS_LOGO = "bit-logo.png"
+
+OSCAR_DASHBOARD_NAVIGATION += [
+    {
+        "label": "Menú Principal",
+        "children": [
+            {
+                "label": "Opciones",
+                "url_name": "dashboard:catalogue-product-list",
+            }
+        ]
+    }
+]

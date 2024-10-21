@@ -348,6 +348,7 @@
                                                     <!-- End Shop Columns -->
 
                                                     <!-- Blog Pages -->
+                                                    ry or products to a menu, we will add this funcionality as a custom app
                                                     <li class="u-has-submenu u-header-collapse__submenu">
                                                         <a class="u-header-collapse__nav-link u-header-collapse__nav-pointer" href="javascript:;" data-target="#headerSidebarblogsCollapse" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="headerSidebarblogsCollapse">
                                                             Blog Pages
@@ -409,23 +410,25 @@
                                         </li>
                                         {% elif option.category %}
                                             <li class="nav-item hs-has-sub-menu u-header__nav-item" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
-                                            {% comment %} <a id="blogMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="javascript:;" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">{{ option.category }}</a> {% endcomment %}
                                             <a id="blogMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="{{ option.category.get_absolute_url }}" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">{{ option.category }}</a>
                                             
                                             <ul id="blogSubMenu" class="hs-sub-menu u-header__sub-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
                                                 {% for child_category in option.category.get_descendants %}
                                                     <li><a class="nav-link u-header__sub-menu-nav-link" href="{{ child_category.get_absolute_url }}">{{ child_category.name }}</a></li>
-                                                {% endfor  %}
+                                                {% endfor %}
                                             </ul>
                                         </li>
                                         {% endif %}
                                     {% endfor %}
 
-                                    {% get_flatpages as flatpages %}
-                                    {% for page in flatpages %}
-                                        <li>
-                                            <a class="nav-link u-header__nav-link" href="{{ page.url }}">{{ page.title }}</a>
-                                        </li>
+                                    {% get_flatpages '/about/' as about_pages %}
+                                    {% for page in about_pages %}
+                                        <li><a class="nav-link u-header__nav-link" href="{{ page.url }}">{{ page.title }}</a></li>
+                                    {% endfor %}
+
+                                    {% get_flatpages '/contacto/' as contact_pages %}
+                                    {% for page in contact_pages %}
+                                        <li><a class="nav-link u-header__nav-link" href="{{ page.url }}">{{ page.title }}</a></li>
                                     {% endfor %}
                                 </ul>
                             </div>
