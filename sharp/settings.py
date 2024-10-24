@@ -81,7 +81,7 @@ INSTALLED_APPS = [
     "oscar.apps.dashboard.shipping.apps.ShippingDashboardConfig",
 
     #myApps
-    "nav.apps.NavConfig",
+    "boutique.apps.BoutiqueConfig",
     
     # 3rd-party apps that oscar depends on
     "widget_tweaks",
@@ -125,7 +125,7 @@ TEMPLATES = [
                 "oscar.apps.communication.notifications.context_processors.notifications",
                 "oscar.core.context_processors.metadata",
                 "core.context_processors.business",
-                "core.context_processors.header",
+                #"core.context_processors.header",
             ],
         },
     },
@@ -244,7 +244,7 @@ OSCAR_DASHBOARD_NAVIGATION += [
         "children": [
             {
                 "label": "Opciones",
-                "url_name": "dashboard:catalogue-product-list",
+                "url_name": "nav-dashboard:menu-list",
             }
         ]
     }
