@@ -81,7 +81,8 @@ INSTALLED_APPS = [
     "oscar.apps.dashboard.shipping.apps.ShippingDashboardConfig",
 
     #myApps
-    "boutique.apps.BoutiqueConfig",
+    "nav.apps.NavConfig",
+    "nav.dashboard.apps.DashboardConfig",
     
     # 3rd-party apps that oscar depends on
     "widget_tweaks",
@@ -125,7 +126,7 @@ TEMPLATES = [
                 "oscar.apps.communication.notifications.context_processors.notifications",
                 "oscar.core.context_processors.metadata",
                 "core.context_processors.business",
-                #"core.context_processors.header",
+                "core.context_processors.header",
             ],
         },
     },

@@ -1,5 +1,5 @@
 from django.conf import settings
-#from nav.models import Menu
+from nav.models import Menu
 from apps.catalogue.models import Category
 
 
@@ -16,7 +16,7 @@ def business(request):
         "logo": settings.BUSINESS_LOGO,
     }
 
-#def header(request):
-#    return {
-#        "menu": Menu.objects.all().order_by("order"),
-#    }
+def header(request):
+    return {
+        "menu": Menu.objects.all().order_by("order"),
+    }

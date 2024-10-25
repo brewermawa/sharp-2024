@@ -25,9 +25,9 @@ from debug_toolbar.toolbar import debug_toolbar_urls
 urlpatterns = [
     path("admin/", admin.site.urls),
 
-    # path('dashboard/boutique/', apps.get_app_config('boutique_dashboard').urls),
-    path("boutique/", apps.get_app_config("boutique").urls),
-    
+    #added for nav app
+    path("dashboard/nav", apps.get_app_config("nav_dashboard").urls),
+
     path("", include(apps.get_app_config("oscar").urls[0])),
 ] + debug_toolbar_urls()
 
