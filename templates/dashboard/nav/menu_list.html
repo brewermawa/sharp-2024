@@ -1,0 +1,72 @@
+{% extends "oscar/dashboard/layout.html" %}
+{% load render_table from django_tables2 %}
+
+{% block body_class %}{{ block.super }}{% endblock body_class %}
+
+{% block title %}Menú Principal | {{ block.super }}{% endblock title %}
+
+{% block breadcrumbs %}
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'dashboard:index' %}">Dashboard</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">Menú Principal</li>
+    </ol>
+  </nav>
+{% endblock breadcrumbs %}
+
+{% block header %}
+  <div class="page-header">
+    <a href="{% url 'nav-dashboard:menu-create' %}" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Nueva opción de Menú</a>
+    <h1>Menú Principal</h1>
+  </div>
+{% endblock header %}
+
+{% block dashboard_content %}
+  {% if menu_list.count %}
+    <form method="post" class="order_table">
+      {% csrf_token %}
+      <table class="table table-striped table-bordered">
+        <tr>
+          <th>Name</th>
+          <th>URL</th>
+          <th>Category</th>
+          <th>Product</th>
+          <th>Order</th>
+          <th>Action</th>
+        </tr>
+        {% for option in menu_list %}
+          <tr>
+            <th>
+              {% comment %} <a href="{% url 'boutique-dashboard:boutique-update' boutique.id %}">{{ boutique.name }}</a> {% endcomment %}
+              <a href="">{{ option.name }}</a>
+            </th>
+            <td>{{ option.url }}</td>
+            <td>{{ option.category }}</td>
+            <td>{{ option.product }}</td>
+            <td>{{ option.order }}</td>
+            <td>
+              <div class="btn-group">
+                {% comment %} <a class="btn btn-primary fas fa-globe" href="{% url 'boutique:details' boutique.id %}"></a>
+                <a class="btn btn-info fas fa-pen" href="{% url 'boutique-dashboard:boutique-update' boutique.id %}"></a>
+                <a class="btn btn-danger fas fa-times" href="{% url 'boutique-dashboard:boutique-delete' boutique.id %}"></a> 
+                <a class="btn btn-primary fas fa-globe" href=""></a>{% endcomment %}
+                <a class="btn btn-info fas fa-pen" href="{% url 'nav-dashboard:menu-update' option.id %}"></a>
+                <a class="btn btn-danger fas fa-times" href="{% url 'nav-dashboard:menu-delete' option.id %}"></a>
+              </div>
+            </td>
+          </tr>
+        {% endfor %}
+      </table>
+
+    </form>
+  {% else %}
+    <p>No companies found.</p>
+  {% endif %}
+{% endblock dashboard_content %}
+
+{% block onbodyload %}
+  {{ block.super }}
+  oscar.dashboard.product_lists.init();
+{% endblock onbodyload %}

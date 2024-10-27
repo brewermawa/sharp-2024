@@ -5,8 +5,7 @@ from oscar.core.loading import get_model
 
 Menu = get_model("nav", "Menu")
 
-
-class DashboardBoutiqueCreateUpdateForm(forms.ModelForm):
+class DashboardMenuCreateUpdateForm(forms.ModelForm):
     class Meta:
         model = Menu
         fields = ("name", "url", "category", "product", "order")

@@ -26,7 +26,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
 
     #added for nav app
-    path("dashboard/nav", apps.get_app_config("nav_dashboard").urls),
+    path("dashboard/nav/", apps.get_app_config("nav_dashboard").urls),
 
     path("", include(apps.get_app_config("oscar").urls[0])),
 ] + debug_toolbar_urls()
