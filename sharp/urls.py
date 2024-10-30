@@ -21,6 +21,7 @@ from django.apps import apps
 from django.conf import settings
 from django.conf.urls.static import static
 from debug_toolbar.toolbar import debug_toolbar_urls
+from django.contrib.flatpages import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -29,6 +30,8 @@ urlpatterns = [
     path("dashboard/nav/", apps.get_app_config("nav_dashboard").urls),
 
     path("", include(apps.get_app_config("oscar").urls[0])),
+    path("about/", views.flatpage, {"url": "/about/"}, name="about"),
+    path("contacto/", views.flatpage, {"url": "/contacto/"}, name="contacto"),
 ] + debug_toolbar_urls()
 
 if settings.DEBUG:
