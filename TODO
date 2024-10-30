@@ -1,4 +1,4 @@
-
+TODO: Add content section from electro
 TODO: Register Sign in on header
 TODO: Track your order on header
 TODO: Track your order page
@@ -39,3 +39,5 @@ DONE: Cart total on header
 DONE: Cart number of items on header
 DONE: Link to cart
 DONE: Search
+DONE: Work with the icons for smal widths (search, account, cart)
+DONE: Clean header
