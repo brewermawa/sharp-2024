@@ -26,8 +26,9 @@ from django.contrib.flatpages import views
 urlpatterns = [
     path("admin/", admin.site.urls),
 
-    #added for nav app
+    #custom app's urls
     path("dashboard/nav/", apps.get_app_config("nav_dashboard").urls),
+    path("dashboard/frontend/", apps.get_app_config("frontend_dashboard").urls),
 
     path("", include(apps.get_app_config("oscar").urls[0])),
     path("about/", views.flatpage, {"url": "/about/"}, name="about"),

@@ -83,6 +83,8 @@ INSTALLED_APPS = [
     #myApps
     "nav.apps.NavConfig",
     "nav.dashboard.apps.DashboardConfig",
+    "frontend.apps.FrontendConfig",
+    "frontend.dashboard.apps.DashboardConfig",
     
     # 3rd-party apps that oscar depends on
     "widget_tweaks",
@@ -241,12 +243,16 @@ BUSINESS_LOGO = "bit-logo.png"
 
 OSCAR_DASHBOARD_NAVIGATION += [
     {
-        "label": "Menú Principal",
+        "label": "Custom",
         "children": [
             {
                 "label": "Opciones",
                 "url_name": "nav-dashboard:menu-list",
-            }
+            },
+            {
+                "label": "Sliders",
+                "url_name": "frontend-dashboard:slider-list",
+            },
         ]
     }
 ]
