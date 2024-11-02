@@ -1,0 +1,51 @@
+{% extends "oscar/dashboard/layout.html" %}
+
+{% block title %}{{ title }} | {{ block.super }}{% endblock title %}
+
+{% block breadcrumbs %}
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'dashboard:index' %}">Dashboard</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'frontend-dashboard:slider-list' %}">Opciones</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+  </ol>
+</nav>
+{% endblock breadcrumbs %}
+
+{% block headertext %}{{ title }}{% endblock headertext %}
+
+{% block dashboard_content %}
+
+  {% if form.errors %}
+  <div class="alert alert-danger">
+    Error en la información proporcionada - Corrige los errores y envía la nueva información"
+  </div>
+  {% endif %}
+
+  <form method="post" class="form-vertical wysiwyg" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+    <div class="alert alert-danger">
+      <span class="help-inline"><i class="fas fa-exclamation"></i> {{ error }}</span>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <div class="table-header">
+      <h3>Opción de menú principal</h3>
+    </div>
+    <div class="card card-body">
+      {% include "oscar/dashboard/partials/form_fields.html" with field=form %}
+    </div>
+
+    <div class="card card-body">
+      <div class="form-actions">
+        <button class="btn btn-primary btn-lg" type="submit">Save</button>
+        or
+        <a href="{% url 'frontend-dashboard:slider-list' %}">Cancel</a>
+      </div>
+    </div>
+  </form>
+{% endblock dashboard_content %}

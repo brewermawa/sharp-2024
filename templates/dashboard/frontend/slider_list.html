@@ -1,1 +1,57 @@
-<h1>Slider list</h1>
+{% extends "oscar/dashboard/layout.html" %}
+
+{% block body_class %}{{ block.super }}{% endblock body_class %}
+
+{% block title %}Home Page Sliders | {{ block.super }}{% endblock title %}
+
+{% block breadcrumbs %}
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'dashboard:index' %}">Dashboard</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">Home Page Sliders</li>
+    </ol>
+  </nav>
+{% endblock breadcrumbs %}
+
+{% block header %}
+  <div class="page-header">
+    <a href="{% url 'frontend-dashboard:slider-create' %}" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Nuevo Slider</a>
+    <h1>Home Page Sliders</h1>
+  </div>
+{% endblock header %}
+
+{% block dashboard_content %}
+    {% if slider_list.count %}
+        <form method="post" class="order_table">
+            {% csrf_token %}
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>Name</th>
+                    <th>Title</th>
+                    <th>URL</th>
+                    <th>Category</th>
+                    <th>Product</th>
+                    <th>Action</th>
+                </tr>
+                {% for slider in slider_list %}
+                    <tr>
+                        <td>{{ slider.name }}</td>
+                        <td>{{ slider.title }}</td>
+                        <td>{{ slider.url }}</td>
+                        <td>{{ slider.category }}</td>
+                        <td>{{ slider.product }}</td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-info fas fa-pen" href="{% url 'frontend-dashboard:slider-update' slider.id %}"></a>
+                                <a class="btn btn-danger fas fa-times" href="{% url 'frontend-dashboard:slider-delete' slider.id %}"></a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </form>
+    {% else %}
+    {% endif %}
+{% endblock dashboard_content %}

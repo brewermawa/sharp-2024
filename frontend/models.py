@@ -4,7 +4,7 @@ from oscar.apps.catalogue.models import Category, Product
 
 class Slider(models.Model):
     name = models.CharField(max_length=25, blank=False, null=False)
-    image = models.ImageField(upload_to="static/images/sliders/", blank=False, null=False)
+    image = models.ImageField(upload_to="sliders/", blank=False, null=False)
     title = models.CharField(max_length=50, blank=False, null=False)
     message = models.CharField(max_length=50, blank=False, null=False)
     button_text = models.CharField(max_length=10, blank=False, null=False)

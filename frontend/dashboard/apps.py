@@ -13,11 +13,17 @@ class DashboardConfig(OscarDashboardConfig):
 
     def ready(self):
         self.slider_list_view = get_class("frontend.dashboard.views", "DashboardSliderListView")
+        self.slider_create_view = get_class("frontend.dashboard.views", "DashboardSliderCreateView")
+        self.slider_update_view = get_class("frontend.dashboard.views", "DashboardSliderUpdateView")
+        self.slider_delete_view = get_class("frontend.dashboard.views", "DashboardSliderDeleteView")
 
 
     def get_urls(self):
         urls = [
             path("", self.slider_list_view.as_view(), name="slider-list"),
+            path("create/", self.slider_create_view.as_view(), name="slider-create"),
+            path("update/<int:pk>", self.slider_update_view.as_view(), name="slider-update"),
+            path("delete/<int:pk>", self.slider_delete_view.as_view(), name="slider-delete"),   
         ]
 
         return self.post_process_urls(urls)
