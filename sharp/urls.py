@@ -23,6 +23,8 @@ from django.conf.urls.static import static
 from debug_toolbar.toolbar import debug_toolbar_urls
 from django.contrib.flatpages import views
 
+from django.views.generic import TemplateView
+
 urlpatterns = [
     path("admin/", admin.site.urls),
 
@@ -33,6 +35,12 @@ urlpatterns = [
     path("", include(apps.get_app_config("oscar").urls[0])),
     path("about/", views.flatpage, {"url": "/about/"}, name="about"),
     path("contacto/", views.flatpage, {"url": "/contacto/"}, name="contacto"),
+
+    path(
+        "tester/",
+        TemplateView.as_view(template_name="home-v2.html"),
+    ),
+
 ] + debug_toolbar_urls()
 
 if settings.DEBUG:

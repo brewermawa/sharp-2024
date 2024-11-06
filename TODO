@@ -1,26 +1,7 @@
-TODO: Slider
-The slider section has:
- - A background image (1920X422)
- - A slider
-A slider has 4 components:
- - The slider image (374x386) (416x420)
- - Slider title
- - Slider message
- - Slider call to action button
-
- I will need to make a custom app to store the slider information. The app will need to have a dashboard section to enter the slider information. In the frontend it will not have any views. The catalog main view need to be modified to add the slider's information to the context.
-
- Teh custom app will be called frontend and will handle, beside the sliders, any other special component that cannot be programmed using the base oscar apps or models.
-
- Model:
- name
- image
- title
- message 
- button-text
- url
-
-TODO: Register Sign in on header
+TODO: Promo Banners
+Will need to make an app alot like the slider custom app
+TODO: Center promo banners when there are less than 4
+TODO: Register/Sign in on header
 TODO: Track your order on header
 TODO: Track your order page
 TODO: In the hamburguer menu when there are a lot of subcatgories, the list of subcategories goes beyond the delimeter line
@@ -63,3 +44,27 @@ DONE: Search
 DONE: Work with the icons for smal widths (search, account, cart)
 DONE: Clean header
 DONE: Add content section from electro
+DONE: Make the slider dashboard app
+DONE: Which oscar view handles the homepage?
+DONE: Modify the homepage view to add the slider information to the context
+DONE: Slider
+The slider section has:
+ - A background image (1920X422)
+ - A slider
+A slider has 4 components:
+ - The slider image (374x386) (416x420)
+ - Slider title
+ - Slider message
+ - Slider call to action button
+
+ I will need to make a custom app to store the slider information. The app will need to have a dashboard section to enter the slider information. In the frontend it will not have any views. The catalog main view need to be modified to add the slider's information to the context.
+
+ Teh custom app will be called frontend and will handle, beside the sliders, any other special component that cannot be programmed using the base oscar apps or models.
+
+ Model:
+ name
+ image
+ title
+ message 
+ button-text
+ url
