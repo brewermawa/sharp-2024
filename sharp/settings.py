@@ -246,12 +246,16 @@ OSCAR_DASHBOARD_NAVIGATION += [
         "label": "Custom",
         "children": [
             {
-                "label": "Opciones",
+                "label": "Menú Principal",
                 "url_name": "nav-dashboard:menu-list",
             },
             {
                 "label": "Sliders",
                 "url_name": "frontend-dashboard:slider-list",
+            },
+            {
+                "label": "Promos",
+                "url_name": "frontend-dashboard:promo-list",
             },
         ]
     }

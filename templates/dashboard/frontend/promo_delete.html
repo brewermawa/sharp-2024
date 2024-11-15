@@ -1,0 +1,31 @@
+{% extends "oscar/dashboard/layout.html" %}
+
+{% block title %}Borrar | {{ block.super }}{% endblock title %}
+
+{% block breadcrumbs %}
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'dashboard:index' %}">Dashboard</a></li>
+    <li class="breadcrumb-item"><a href="{% url 'frontend-dashboard:slider-list' %}">Promo</a></li>
+    <li class="breadcrumb-item">{{ object.name }}</li>
+    <li class="breadcrumb-item active" aria-current="page">Borrar</li>
+  </ol>
+</nav>
+{% endblock breadcrumbs %}
+
+{% block headertext %}Borrar promo: {{ object.name }}?{% endblock headertext %}
+
+{% block dashboard_content %}
+<div class="card card-body bg-light">
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-actions">
+      <p>Borrar slider<strong>{{ obect.name }}</strong> - Estas seguro?</p>
+      <button type="submit" class="btn btn-lg btn-danger">Borrar</button>
+      o
+      <a href="{% url 'frontend-dashboard:slider-list' %}"> cancelar</a>
+    </div>
+  </form>
+</div>
+{% endblock dashboard_content %}

@@ -1,5 +1,5 @@
-TODO: Promo Banners
-Will need to make an app alot like the slider custom app
+TODO: How am I going to choose the feautured products?
+TODO: When the window is not maximized, the main content is not centered
 TODO: Center promo banners when there are less than 4
 TODO: Register/Sign in on header
 TODO: Track your order on header
@@ -68,3 +68,5 @@ A slider has 4 components:
  message 
  button-text
  url
+
+ DONE: Promo Banners - Will need to make an app alot like the slider custom app

@@ -1,0 +1,57 @@
+{% extends "oscar/dashboard/layout.html" %}
+
+{% block body_class %}{{ block.super }}{% endblock body_class %}
+
+{% block title %}Home Page Promos | {{ block.super }}{% endblock title %}
+
+{% block breadcrumbs %}
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'dashboard:index' %}">Dashboard</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">Home Page Promos</li>
+    </ol>
+  </nav>
+{% endblock breadcrumbs %}
+
+{% block header %}
+  <div class="page-header">
+    <a href="{% url 'frontend-dashboard:promo-create' %}" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Nuevo Slider</a>
+    <h1>Home Page Promos</h1>
+  </div>
+{% endblock header %}
+
+{% block dashboard_content %}
+    {% if promo_list.count %}
+        <form method="post" class="order_table">
+            {% csrf_token %}
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>Name</th>
+                    <th>Title</th>
+                    <th>URL</th>
+                    <th>Category</th>
+                    <th>Product</th>
+                    <th>Action</th>
+                </tr>
+                {% for promo in promo_list %}
+                    <tr>
+                        <td>{{ promo.name }}</td>
+                        <td>{{ promo.title }}</td>
+                        <td>{{ promo.url }}</td>
+                        <td>{{ promo.category }}</td>
+                        <td>{{ promo.product }}</td>
+                        <td>
+                            <div class="btn-group">
+                                <a class="btn btn-info fas fa-pen" href="{% url 'frontend-dashboard:promo-update' promo.id %}"></a>
+                                <a class="btn btn-danger fas fa-times" href="{% url 'frontend-dashboard:promo-delete' promo.id %}"></a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </form>
+    {% else %}
+    {% endif %}
+{% endblock dashboard_content %}
