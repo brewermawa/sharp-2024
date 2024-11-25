@@ -30,7 +30,7 @@
 
 {% block layout %}
     {% block header %}
-        {% include "oscar/partials/header.html" %}
+        {% include "oscar/partials/header.html" %} 
     {% endblock header %}
     
     {% block content %}{% endblock content %}
