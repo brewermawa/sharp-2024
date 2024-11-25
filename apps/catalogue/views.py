@@ -7,7 +7,7 @@ Range = get_model("offer", "Range")
 
 
 class CatalogueView(BaseCatalogueView):
-    template_name = "oscar/catalogue/index.html"
+    #template_name = "oscar/catalogue/index.html"
     
     def get_context_data(self, **kwargs):
         ctx = {}

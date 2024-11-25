@@ -38,7 +38,7 @@ urlpatterns = [
 
     path(
         "tester/",
-        TemplateView.as_view(template_name="home-v2.html"),
+        TemplateView.as_view(template_name="uomo.html"),
     ),
 
 ] + debug_toolbar_urls()
