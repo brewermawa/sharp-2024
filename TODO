@@ -1,11 +1,5 @@
-TODO: How am I going to choose the feautured products?
-TODO: When the window is not maximized, the main content is not centered
-TODO: Center promo banners when there are less than 4
-TODO: Register/Sign in on header
-TODO: Track your order on header
-TODO: Track your order page
-TODO: In the hamburguer menu when there are a lot of subcatgories, the list of subcategories goes beyond the delimeter line
-TODO: Offer/Value of the day page
+TODO: In the header, when there is a click on the cart icon, the UOMO theme shows a sidebar with the cart items. We have to fill this sidebar with the cart information
+
 TODO: Load real info in the database
 TODO: Add RFC to customer
 TODO: Create about us page

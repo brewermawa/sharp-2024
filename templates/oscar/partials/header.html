@@ -2,295 +2,699 @@
 {% load category_tags %}
 {% load flatpages %}
 
+<!-- Mobile Header Start -->
+<div class="header-mobile header_sticky">
+    <div class="container d-flex align-items-center h-100">
+        <a class="mobile-nav-activator d-block position-relative" href="#">
+            <svg class="nav-icon" width="25" height="18" viewBox="0 0 25 18" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon_nav" />
+            </svg>
+            <span class="btn-close-lg position-absolute top-0 start-0 w-100"></span>
+        </a>
+
+        <div class="logo">
+            <a href="{{ homepage_url }}"><img src="{% static 'images/logo.png' %}" alt="Uomo" class="logo__image d-block" height="" width="" /></a>
+        </div>
+
+        <a href="#" class="header-tools__item header-tools__cart js-open-aside" data-aside="cartDrawer">
+            <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon_cart" />
+            </svg>
+            <span class="cart-amount d-block position-absolute js-cart-items-count">{{ basket.num_items }}</span>
+        </a>
+    </div>
+
+    <nav class="header-mobile__navigation navigation d-flex flex-column w-100 position-absolute top-100 bg-body overflow-auto">
+        <div class="container">
+            <form action="search.html" method="GET" class="search-field position-relative mt-4 mb-3">
+                <div class="position-relative">
+                    <input class="search-field__input w-100 border rounded-1" type="text" name="search-keyword" placeholder="Search products" />
+                    <button class="btn-icon search-popup__submit pb-0 me-2" type="submit">
+                        <svg class="d-block" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use href="#icon_search" />
+                        </svg>
+                    </button>
+                    <button class="btn-icon btn-close-lg search-popup__reset pb-0 me-2" type="reset"></button>
+                </div>
+
+                <div class="position-absolute start-0 top-100 m-0 w-100">
+                <div class="search-result"></div>
+                </div>
+            </form>
+        <!-- /.header-search -->
+        </div>
+        <!-- /.container -->
+
+        <div class="container">
+        <div class="overflow-hidden">
+            <ul class="navigation__list list-unstyled position-relative">
+            <li class="navigation__item">
+                <a href="#" class="navigation__link js-nav-right d-flex align-items-center">
+                Home<svg class="ms-auto" width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                    <use href="#icon_next_sm" />
+                </svg>
+                </a>
+                <div class="sub-menu position-absolute top-0 start-100 w-100 d-none">
+                <a href="#" class="navigation__link js-nav-left d-flex align-items-center border-bottom mb-2">
+                    <svg class="me-2" width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                    <use href="#icon_prev_sm" />
+                    </svg>Home
+                </a>
+                <ul class="list-unstyled">
+                    <li class="sub-menu__item">
+                    <a href="../Demo1/index.html" class="menu-link menu-link_us-s">Home 1</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo2/index.html" class="menu-link menu-link_us-s">Home 2</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo3/index.html" class="menu-link menu-link_us-s">Home 3</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo4/index.html" class="menu-link menu-link_us-s">Home 4</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo5/index.html" class="menu-link menu-link_us-s">Home 5</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo6/index.html" class="menu-link menu-link_us-s">Home 6</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo7/index.html" class="menu-link menu-link_us-s">Home 7</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo8/index.html" class="menu-link menu-link_us-s">Home 8</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo9/index.html" class="menu-link menu-link_us-s">Home 9</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo10/index.html" class="menu-link menu-link_us-s">Home 10</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo11/index.html" class="menu-link menu-link_us-s">Home 11</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo12/index.html" class="menu-link menu-link_us-s">Home 12</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo13/index.html" class="menu-link menu-link_us-s">Home 13</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo14/index.html" class="menu-link menu-link_us-s">Home 14</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo15/index.html" class="menu-link menu-link_us-s">Home 15</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo16/index.html" class="menu-link menu-link_us-s">Home 16</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo17/index.html" class="menu-link menu-link_us-s">Home 17</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo18/index.html" class="menu-link menu-link_us-s">Home 18</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo19/index.html" class="menu-link menu-link_us-s">Home 19</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo20/index.html" class="menu-link menu-link_us-s">Home 20</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo21/index.html" class="menu-link menu-link_us-s">Home 21</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo22/index.html" class="menu-link menu-link_us-s">Home 22</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="../Demo23/index.html" class="menu-link menu-link_us-s">Home 23</a>
+                    </li>
+                </ul>
+                <!-- /.box-menu -->
+                </div>
+            </li>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link js-nav-right d-flex align-items-center">
+                Shop<svg class="ms-auto" width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                    <use href="#icon_next_sm" />
+                </svg>
+                </a>
+                <div class="sub-menu position-absolute top-0 start-100 w-100 d-none">
+                <a href="#" class="navigation__link js-nav-left d-flex align-items-center border-bottom mb-3">
+                    <svg class="me-2" width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                    <use href="#icon_prev_sm" />
+                    </svg>Shop
+                </a>
+                <div class="sub-menu__wrapper">
+                    <a href="#" class="navigation__link js-nav-right d-flex align-items-center">
+                    Shop List<svg class="ms-auto" width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon_next_sm" />
+                    </svg>
+                    </a>
+                    <div class="sub-menu__wrapper position-absolute top-0 start-100 w-100 d-none">
+                    <a href="#" class="navigation__link js-nav-left d-flex align-items-center border-bottom mb-2">
+                        <svg class="me-2" width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon_prev_sm" />
+                        </svg>Shop List
+                    </a>
+                    <ul class="sub-menu__list list-unstyled">
+                        <li class="sub-menu__item">
+                        <a href="./shop1.html" class="menu-link menu-link_us-s">Shop List V1</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./shop2.html" class="menu-link menu-link_us-s">Shop List V2</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./shop3.html" class="menu-link menu-link_us-s">Shop List V3</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./shop4.html" class="menu-link menu-link_us-s">Shop List V4</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./shop5.html" class="menu-link menu-link_us-s">Shop List V5</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./shop6.html" class="menu-link menu-link_us-s">Shop List V6</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./shop7.html" class="menu-link menu-link_us-s">Shop List V7</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./shop8.html" class="menu-link menu-link_us-s">Shop List V8</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./shop9.html" class="menu-link menu-link_us-s">Shop List V9</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./shop10.html" class="menu-link menu-link_us-s">Shop Item Style</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./shop11.html" class="menu-link menu-link_us-s">Horizontal Scroll</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <!-- /.sub-menu__wrapper -->
+
+                    <a href="#" class="navigation__link js-nav-right d-flex align-items-center">
+                    Shop Detail<svg class="ms-auto" width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon_next_sm" />
+                    </svg>
+                    </a>
+                    <div class="sub-menu__wrapper position-absolute top-0 start-100 w-100 d-none">
+                    <a href="#" class="navigation__link js-nav-left d-flex align-items-center border-bottom mb-2">
+                        <svg class="me-2" width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon_prev_sm" />
+                        </svg>Shop Detail
+                    </a>
+                    <ul class="sub-menu__list list-unstyled">
+                        <li class="sub-menu__item">
+                        <a href="./product2_variable.html" class="menu-link menu-link_us-s">Shop Detail V1</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product7_v2.html" class="menu-link menu-link_us-s">Shop Detail V2</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product8_v3.html" class="menu-link menu-link_us-s">Shop Detail V3</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product9_v4.html" class="menu-link menu-link_us-s">Shop Detail V4</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product10_v5.html" class="menu-link menu-link_us-s">Shop Detail V5</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product11_v6.html" class="menu-link menu-link_us-s">Shop Detail V6</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product12_v7.html" class="menu-link menu-link_us-s">Shop Detail V7</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product13_v8.html" class="menu-link menu-link_us-s">Shop Detail V8</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product14_v9.html" class="menu-link menu-link_us-s">Shop Detail V9</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product15_v10.html" class="menu-link menu-link_us-s">Shop Detail V10</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product16_v11.html" class="menu-link menu-link_us-s">Shop Detail V11</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <!-- /.sub-menu__wrapper -->
+
+                    <a href="#" class="navigation__link js-nav-right d-flex align-items-center">
+                    Other Pages<svg class="ms-auto" width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon_next_sm" />
+                    </svg>
+                    </a>
+                    <div class="sub-menu__wrapper position-absolute top-0 start-100 w-100 d-none">
+                    <a href="#" class="navigation__link js-nav-left d-flex align-items-center border-bottom mb-2">
+                        <svg class="me-2" width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                        <use href="#icon_prev_sm" />
+                        </svg>Other Pages
+                    </a>
+                    <ul class="sub-menu__list list-unstyled">
+                        <li class="sub-menu__item">
+                        <a href="./shop12.html" class="menu-link menu-link_us-s">Collection Grid</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product1_simple.html" class="menu-link menu-link_us-s">Simple Product</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product2_variable.html" class="menu-link menu-link_us-s">Variable Product</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product3_external.html" class="menu-link menu-link_us-s">External Product</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product4_grouped.html" class="menu-link menu-link_us-s">Grouped Product</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product5_onsale.html" class="menu-link menu-link_us-s">On Sale</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./product6_outofstock.html" class="menu-link menu-link_us-s">Out of Stock</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./shop_cart.html" class="menu-link menu-link_us-s">Shopping Cart</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./shop_checkout.html" class="menu-link menu-link_us-s">Checkout</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./shop_order_complete.html" class="menu-link menu-link_us-s">Order Complete</a>
+                        </li>
+                        <li class="sub-menu__item">
+                        <a href="./shop_order_tracking.html" class="menu-link menu-link_us-s">Order Tracking</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <!-- /.sub-menu__wrapper -->
+                </div>
+                <!-- /.sub-menu__wrapper -->
+                </div>
+                <!-- /.sub-menu -->
+            </li>
+
+            <li class="navigation__item">
+                <a href="#" class="navigation__link js-nav-right d-flex align-items-center">
+                Blog<svg class="ms-auto" width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                    <use href="#icon_next_sm" />
+                </svg>
+                </a>
+                <div class="sub-menu position-absolute top-0 start-100 w-100 d-none">
+                <a href="#" class="navigation__link js-nav-left d-flex align-items-center border-bottom mb-2">
+                    <svg class="me-2" width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                    <use href="#icon_prev_sm" />
+                    </svg>Blog
+                </a>
+                <ul class="list-unstyled">
+                    <li class="sub-menu__item">
+                    <a href="./blog_list1.html" class="menu-link menu-link_us-s">Blog V1</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="./blog_list2.html" class="menu-link menu-link_us-s">Blog V2</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="./blog_list3.html" class="menu-link menu-link_us-s">Blog V3</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="./blog_single.html" class="menu-link menu-link_us-s">Blog Detail</a>
+                    </li>
+                </ul>
+                </div>
+            </li>
+
+            <li class="navigation__item">
+                <a href="#" class="navigation__link js-nav-right d-flex align-items-center">
+                Pages<svg class="ms-auto" width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                    <use href="#icon_next_sm" />
+                </svg>
+                </a>
+                <div class="sub-menu position-absolute top-0 start-100 w-100 d-none">
+                <a href="#" class="navigation__link js-nav-left d-flex align-items-center border-bottom mb-2">
+                    <svg class="me-2" width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                    <use href="#icon_prev_sm" />
+                    </svg>Pages
+                </a>
+                <ul class="list-unstyled">
+                    <li class="sub-menu__item">
+                    <a href="./account_dashboard.html" class="menu-link menu-link_us-s">My Account</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="./login_register.html" class="menu-link menu-link_us-s">Login / Register</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="./store_location.html" class="menu-link menu-link_us-s">Store Locator</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="./lookbook.html" class="menu-link menu-link_us-s">Lookbook</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="./faq.html" class="menu-link menu-link_us-s">Faq</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="./terms.html" class="menu-link menu-link_us-s">Terms</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="./404.html" class="menu-link menu-link_us-s">404 Error</a>
+                    </li>
+                    <li class="sub-menu__item">
+                    <a href="./coming_soon.html" class="menu-link menu-link_us-s">Coming Soon</a>
+                    </li>
+                </ul>
+                </div>
+            </li>
+
+            <li class="navigation__item">
+                <a href="./about.html" class="navigation__link">About</a>
+            </li>
+
+            <li class="navigation__item">
+                <a href="./contact.html" class="navigation__link">Contact</a>
+            </li>
+            </ul>
+            <!-- /.navigation__list -->
+        </div>
+        <!-- /.overflow-hidden -->
+        </div>
+        <!-- /.container -->
+
+        <div class="border-top mt-auto pb-2">
+        <div class="customer-links container mt-4 mb-2 pb-1">
+            <svg class="d-inline-block align-middle" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use href="#icon_user" />
+            </svg>
+            <span class="d-inline-block ms-2 text-uppercase align-middle fw-medium">My Account</span>
+        </div>
+
+        <div class="container d-flex align-items-center">
+            <label for="footerSettingsLanguage_mobile" class="me-2 text-secondary">Language</label>
+            <select id="footerSettingsLanguage_mobile" class="form-select form-select-sm bg-transparent border-0" aria-label="Default select example" name="store-language">
+            <option class="footer-select__option" selected>United Kingdom | English</option>
+            <option class="footer-select__option" value="1">United States | English</option>
+            <option class="footer-select__option" value="2">German</option>
+            <option class="footer-select__option" value="3">French</option>
+            <option class="footer-select__option" value="4">Swedish</option>
+            </select>
+        </div>
+
+        <div class="container d-flex align-items-center">
+            <label for="footerSettingsCurrency_mobile" class="me-2 text-secondary">Currency</label>
+            <select id="footerSettingsCurrency_mobile" class="form-select form-select-sm bg-transparent border-0" aria-label="Default select example" name="store-language">
+            <option selected>$ USD</option>
+            <option value="1">£ GBP</option>
+            <option value="2">€ EURO</option>
+            </select>
+        </div>
+
+        <ul class="container social-links list-unstyled d-flex flex-wrap mb-0">
+            <li>
+            <a href="https://www.facebook.com" class="footer__social-link d-block ps-0">
+                <svg class="svg-icon svg-icon_facebook" width="9" height="15" viewBox="0 0 9 15" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon_facebook" />
+                </svg>
+            </a>
+            </li>
+            <li>
+            <a href="https://twitter.com" class="footer__social-link d-block">
+                <svg class="svg-icon svg-icon_twitter" width="14" height="13" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon_twitter" />
+                </svg>
+            </a>
+            </li>
+            <li>
+            <a href="https://www.instagram.com" class="footer__social-link d-block">
+                <svg class="svg-icon svg-icon_instagram" width="14" height="13" viewBox="0 0 14 13" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon_instagram" />
+                </svg>
+            </a>
+            </li>
+            <li>
+            <a href="https://www.youtube.com" class="footer__social-link d-block">
+                <svg class="svg-icon svg-icon_youtube" width="16" height="11" viewBox="0 0 16 11" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.0117 1.8584C14.8477 1.20215 14.3281 0.682617 13.6992 0.518555C12.5234 0.19043 7.875 0.19043 7.875 0.19043C7.875 0.19043 3.19922 0.19043 2.02344 0.518555C1.39453 0.682617 0.875 1.20215 0.710938 1.8584C0.382812 3.00684 0.382812 5.46777 0.382812 5.46777C0.382812 5.46777 0.382812 7.90137 0.710938 9.07715C0.875 9.7334 1.39453 10.2256 2.02344 10.3896C3.19922 10.6904 7.875 10.6904 7.875 10.6904C7.875 10.6904 12.5234 10.6904 13.6992 10.3896C14.3281 10.2256 14.8477 9.7334 15.0117 9.07715C15.3398 7.90137 15.3398 5.46777 15.3398 5.46777C15.3398 5.46777 15.3398 3.00684 15.0117 1.8584ZM6.34375 7.68262V3.25293L10.2266 5.46777L6.34375 7.68262Z" />
+                </svg>
+            </a>
+            </li>
+            <li>
+            <a href="https://www.pinterest.com" class="footer__social-link d-block">
+                <svg class="svg-icon svg-icon_pinterest" width="14" height="15" viewBox="0 0 14 15" xmlns="http://www.w3.org/2000/svg">
+                <use href="#icon_pinterest" />
+                </svg>
+            </a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+    <!-- /.navigation -->
+</div>
+<!-- /.header-mobile -->
+<!-- Mobile Header Start -->
+
+{% comment %}
 <!-- ========== HEADER ========== -->
 <header id="header" class="u-header u-header-left-aligned-nav">
-    
-    <div class="u-header__section">
-        <!-- Topbar start -->
-        <div class="u-header-topbar py-2 d-none d-xl-block">
-            <div class="container">
-                <div class="d-flex align-items-center">
-                    <div class="topbar-left">
-                        <a href="#" class="text-gray-110 font-size-13 u-header-topbar__nav-link">{{ shop_tagline }}</a>
-                    </div>
-                    <div class="topbar-right ml-auto">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
-                                <a href="#" class="u-header-topbar__nav-link"><i class="ec ec-map-pointer mr-1"></i> Ubicación</a>
-                            </li>
-                            {% if user.is_authenticated %}
-                                <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
-                                    <a href="../shop/track-your-order.html" class="u-header-topbar__nav-link"><i class="ec ec-transport mr-1"></i> Track Your Order</a>
-                                </li>
-                            {% endif %}
-                            <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
-                                <!-- Account Sidebar Toggle Button -->
-                                <a id="sidebarNavToggler" href="javascript:;" role="button" class="u-header-topbar__nav-link"
-                                    aria-controls="sidebarContent"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
-                                    data-unfold-event="click"
-                                    data-unfold-hide-on-scroll="false"
-                                    data-unfold-target="#sidebarContent"
-                                    data-unfold-type="css-animation"
-                                    data-unfold-animation-in="fadeInRight"
-                                    data-unfold-animation-out="fadeOutRight"
-                                    data-unfold-duration="500">
-                                    <i class="ec ec-user mr-1"></i> Register <span class="text-gray-50">or</span> Sign in
-                                </a>
-                                <!-- End Account Sidebar Toggle Button -->
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <div class="u-header__section">
+    <!-- Topbar start -->
+    <div class="u-header-topbar py-2 d-none d-xl-block">
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <div class="topbar-left">
+            <a href="#" class="text-gray-110 font-size-13 u-header-topbar__nav-link">{{ shop_tagline }}</a>
+          </div>
+          <div class="topbar-right ml-auto">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
+                <a href="#" class="u-header-topbar__nav-link"><i class="ec ec-map-pointer mr-1"></i> Ubicación</a>
+              </li>
+              {% if user.is_authenticated %}
+                <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
+                  <a href="../shop/track-your-order.html" class="u-header-topbar__nav-link"><i class="ec ec-transport mr-1"></i> Track Your Order</a>
+                </li>
+              {% endif %}
+              <li class="list-inline-item mr-0 u-header-topbar__nav-item u-header-topbar__nav-item-border">
+                <!-- Account Sidebar Toggle Button -->
+                <a id="sidebarNavToggler" href="javascript:;" role="button" class="u-header-topbar__nav-link" aria-controls="sidebarContent" aria-haspopup="true" aria-expanded="false" data-unfold-event="click" data-unfold-hide-on-scroll="false" data-unfold-target="#sidebarContent" data-unfold-type="css-animation" data-unfold-animation-in="fadeInRight" data-unfold-animation-out="fadeOutRight" data-unfold-duration="500"><i class="ec ec-user mr-1"></i> Register <span class="text-gray-50">or</span> Sign in</a>
+                <!-- End Account Sidebar Toggle Button -->
+              </li>
+            </ul>
+          </div>
         </div>
-        <!-- Topbar end -->
-
-        <!-- Logo and Menu -->
-        <div class="py-2 py-xl-4 bg-primary-down-lg">
-            <div class="container my-0dot5 my-xl-0">
-                <div class="row align-items-center">
-                    <div class="col-auto">
-                        <nav class="navbar navbar-expand u-header__navbar py-0 justify-content-xl-between max-width-270 min-width-270">
-                            <!-- Logo -->
-                            <a class="order-1 order-xl-0 navbar-brand u-header__navbar-brand u-header__navbar-brand-center" href="{{ homepage_url }}" aria-label="Electro">
-                                <img src="{% static 'images/logo.png' %}" alt="">
-                            </a>
-                            <!-- End Logo -->
-
-                            <!-- Hamburguer menu button start -->
-                            <button id="sidebarHeaderInvokerMenu" type="button" class="navbar-toggler d-block btn u-hamburger mr-3 mr-xl-0"
-                                aria-controls="sidebarHeader"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                                data-unfold-event="click"
-                                data-unfold-hide-on-scroll="false"
-                                data-unfold-target="#sidebarHeader1"
-                                data-unfold-type="css-animation"
-                                data-unfold-animation-in="fadeInLeft"
-                                data-unfold-animation-out="fadeOutLeft"
-                                data-unfold-duration="500">
-                                <span id="hamburgerTriggerMenu" class="u-hamburger__box">
-                                    <span class="u-hamburger__inner"></span>
-                                </span>
-                            </button>
-                            <!-- Hamburguer menu button end -->
-                        </nav>
-                    </div>
-                    <!-- Menú principal start -->
-                    <div class="col d-none d-xl-block">
-                        <nav class="js-mega-menu navbar navbar-expand-md u-header__navbar u-header__navbar--no-space">
-                            <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
-                                <ul class="navbar-nav u-header__navbar-nav">
-                                    <!-- Home -->
-                                    {% for option in menu %}
-                                        {% if option.url %}
-                                            <li class="nav-item u-header__nav-item">
-                                                <a class="nav-link u-header__nav-link" href="{% url option.url %}">{{ option.name }}</a>
-                                            </li>
-                                        {% elif option.product %}
-                                        <li class="nav-item u-header__nav-item">
-                                            <a class="nav-link u-header__nav-link" href="{{ option.product.get_absolute_url }}">{{ option.product }}</a>
-                                        </li>
-                                        {% elif option.category %}
-                                            <li class="nav-item hs-has-sub-menu u-header__nav-item" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
-                                            <a id="blogMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="{{ option.category.get_absolute_url }}" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">{{ option.category }}</a>
-                                            
-                                            <ul id="blogSubMenu" class="hs-sub-menu u-header__sub-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
-                                                {% for child_category in option.category.get_descendants %}
-                                                    <li><a class="nav-link u-header__sub-menu-nav-link" href="{{ child_category.get_absolute_url }}">{{ child_category.name }}</a></li>
-                                                {% endfor %}
-                                            </ul>
-                                        </li>
-                                        {% endif %}
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                    <!-- Menú principal end -->
-                    <!-- Customer Care start -->
-                    <div class="d-none d-xl-block col-md-auto">
-                        <div class="d-flex">
-                            <i class="ec ec-support font-size-50 text-primary"></i>
-                            <div class="ml-2">
-                                <div class="phone">
-                                    <strong>Teléfono:</strong> <a href="tel:8114771790" class="text-gray-90">{{ telefono }}</a>
-                                </div>
-                                <div class="email">
-                                    <strong>E-mail</strong>: <a href="mailto:soporte@bi-tecnologia.com" class="text-gray-90">{{ email }}</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Customer Care end -->
-                    <!-- Icons for small widths start -->
-                    <div class="d-xl-none col col-xl-auto text-right text-xl-left pl-0 pl-xl-3 position-static">
-                        <div class="d-inline-flex">
-                            <ul class="d-flex list-unstyled mb-0 align-items-center">
-                                <!-- Search start -->
-                                <li class="col d-xl-none px-2 px-sm-3 position-static">
-                                    <a id="searchClassicInvoker" class="font-size-22 text-gray-90 text-lh-1 btn-text-secondary" href="javascript:;" role="button"
-                                        data-toggle="tooltip"
-                                        data-placement="top"
-                                        title="Search"
-                                        aria-controls="searchClassic"
-                                        aria-haspopup="true"
-                                        aria-expanded="false"
-                                        data-unfold-target="#searchClassic"
-                                        data-unfold-type="css-animation"
-                                        data-unfold-duration="300"
-                                        data-unfold-delay="300"
-                                        data-unfold-hide-on-scroll="true"
-                                        data-unfold-animation-in="slideInUp"
-                                        data-unfold-animation-out="fadeOut">
-                                        <span class="ec ec-search"></span>
-                                    </a>
-                                    <div id="searchClassic" class="dropdown-menu dropdown-unfold dropdown-menu-right left-0 mx-2" aria-labelledby="searchClassicInvoker">
-                                        <form class="js-focus-state input-group px-3" method="GET" action="{% url 'search:search' %}">
-                                            <input class="form-control" type="search"  name="q" id="searchProduct" placeholder="Buscar en Catálogo" aria-label="Buscar en Catálogo" aria-describedby="searchProduct1" required>
-                                            <div class="input-group-append">
-                                                <button class="btn btn-primary px-3" type="submit" id="searchProduct1"><i class="font-size-18 ec ec-search"></i></button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </li>
-                                <!-- Search end -->
-                                <li class="col d-xl-none px-2 px-sm-3"><a href="{% url 'customer:summary' %}" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="My Account"><i class="font-size-22 ec ec-user"></i></a></li>
-                                <li class="col pr-xl-0 px-2 px-sm-3">
-                                    <a href="{% url 'basket:summary' %}" class="text-gray-90 position-relative d-flex " data-toggle="tooltip" data-placement="top" title="Cart">
-                                        <i class="font-size-22 ec ec-shopping-bag"></i>
-                                        <span class="width-22 height-22 bg-dark position-absolute d-flex align-items-center justify-content-center rounded-circle left-12 top-8 font-weight-bold font-size-12 text-white">{{ basket.num_items }}</span>
-                                        <span class="d-none d-xl-block font-weight-bold font-size-16 text-gray-90 ml-3">${{ basket.total_incl_tax }}</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Icons for small widths end -->
-                </div>
-            </div>
-        </div>
-        <!-- End Logo and Menu -->
-
-        <div class="d-none d-xl-block bg-primary">
-            <div class="container">
-                <div class="row align-items-stretch min-height-50">
-                    <!-- Hamburguer Menu start -->
-                    <div class="col-md-auto d-none d-xl-flex align-items-end">
-                        <div class="max-width-270 min-width-270">
-                            <!-- Basics Accordion -->
-                            <div id="basicsAccordion">
-                                <!-- Card -->
-                                <div class="card border-0 rounded-0">
-                                    <div class="card-header bg-primary rounded-0 card-collapse border-0" id="basicsHeadingOne">
-                                        <button type="button" class="btn-link btn-remove-focus btn-block d-flex card-btn py-3 text-lh-1 px-4 shadow-none btn-primary rounded-top-lg border-0 font-weight-bold text-gray-90"
-                                            data-toggle="collapse"
-                                            data-target="#basicsCollapseOne"
-                                            aria-expanded="true"
-                                            aria-controls="basicsCollapseOne">
-                                            <span class="pl-1 text-gray-90">Caegorías</span>
-                                            <span class="text-gray-90 ml-3">
-                                                <span class="ec ec-arrow-down-search"></span>
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <div id="basicsCollapseOne" class="collapse show vertical-menu v1"
-                                        aria-labelledby="basicsHeadingOne"
-                                        data-parent="#basicsAccordion">
-                                        <div class="card-body p-0">
-                                            <nav class="js-mega-menu navbar navbar-expand-xl u-header__navbar u-header__navbar--no-space hs-menu-initialized">
-                                                <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
-                                                    <ul class="navbar-nav u-header__navbar-nav border-primary border-top-0">
-                                                        <!-- TODO: Offer/Value of the day page -->
-                                                        <li class="nav-item u-header__nav-item"
-                                                            data-event="hover"
-                                                            data-position="left">
-                                                            <a href="#" class="nav-link u-header__nav-link font-weight-bold">Promoción del día</a>
-                                                        </li>
-                                                        <!-- Nav Item MegaMenu -->
-                                                        {% category_tree depth=1 as tree_categories %}
-                                                        {% for category in tree_categories %}
-                                                        <li class="nav-item hs-has-mega-menu u-header__nav-item"
-                                                            data-event="hover"
-                                                            data-animation-in="slideInUp"
-                                                            data-animation-out="fadeOut"
-                                                            data-position="left">
-                                                            <a id="basicMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="{{ category.get_absolute_url }}" aria-haspopup="true" aria-expanded="false">{{ category.name }}</a>
-
-                                                            <!-- child categories start -->
-                                                            <div class="hs-mega-menu vmm-tfw u-header__sub-menu" aria-labelledby="basicMegaMenu">
-                                                                {% comment %} <div class="vmm-bg">
-                                                                    <img class="img-fluid" src="{% static 'img/500X400/img1.png' %}" alt="Image Description">
-                                                                </div> {% endcomment %}
-                                                                <div class="row u-header__mega-menu-wrapper">
-                                                                    <div class="col mb-3 mb-sm-0">
-                                                                        <span class="u-header__sub-menu-title">{{ category.name }}</span>
-                                                                        <ul class="u-header__sub-menu-nav-group mb-3">
-                                                                            {% for child_category in category.category.get_descendants %}
-                                                                                <li><a class="nav-link u-header__sub-menu-nav-link" href="{{ child_category.get_absolute_url }}">{{ child_category.name }}</a></li>
-                                                                            {% endfor %}
-                                                                        </ul>
-                                                                    </div>
-                                                                    {% comment %} <div class="col mb-3 mb-sm-0">
-                                                                        <span class="u-header__sub-menu-title">Secundario master 2</span>
-                                                                        <ul class="u-header__sub-menu-nav-group">
-                                                                            <li><a class="nav-link u-header__sub-menu-nav-link" href="#">Secundario child 1</a></li>
-                                                                        </ul>
-                                                                    </div> {% endcomment %}
-                                                                </div>
-                                                            </div>
-                                                            <!-- End Nav Item - Mega Menu -->
-                                                        </li>
-                                                        <!-- child categories end -->
-                                                        {% endfor %}
-                                                    </ul>
-                                                </div>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Card -->
-                            </div>
-                            <!-- End Basics Accordion -->
-                        </div>
-                    </div>
-                    <!-- Hamburguer Menu end -->
-                    <!-- Search bar start -->
-                    <div class="col align-self-center">
-                        <form class="js-focus-state" method="GET" action="{% url 'search:search' %}">
-                            <label class="sr-only" for="searchProduct">Search</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control py-2 pl-5 font-size-15 border-0 height-40 rounded-left-pill" name="q" id="searchProduct" placeholder="Buscar en Catálogo" aria-label="Buscar en Catálogo" aria-describedby="searchProduct1" required>
-                                <div class="input-group-append">
-                                    <button class="btn btn-dark height-40 py-2 px-3 rounded-right-pill" type="submit" id="searchProduct1">
-                                        <span class="ec ec-search font-size-24"></span>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- Search bar end -->
-                    <!-- Header Icons -->
-                    <div class="col-md-auto align-self-center">
-                        <div class="d-flex">
-                            <ul class="d-flex list-unstyled mb-0">
-                                <li class="col"><a href="{% url 'customer:wishlists-list' %}" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="Favorites"><i class="font-size-22 ec ec-favorites"></i></a></li>
-                                <li class="col pr-0">
-                                    <a href="{% url 'basket:summary' %}" class="text-gray-90 position-relative d-flex " data-toggle="tooltip" data-placement="top" title="Cart">
-                                        <i class="font-size-22 ec ec-shopping-bag"></i>
-                                        <span class="width-22 height-22 bg-dark position-absolute flex-content-center text-white rounded-circle left-12 top-8 font-weight-bold font-size-12">{{ basket.num_items }}</span>
-                                        <span class="font-weight-bold font-size-16 text-gray-90 ml-3">${{ basket.total_incl_tax }}</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End Header Icons -->
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <!-- Topbar end -->
+
+    <!-- Logo and Menu -->
+    <div class="py-2 py-xl-4 bg-primary-down-lg">
+      <div class="container my-0dot5 my-xl-0">
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <nav class="navbar navbar-expand u-header__navbar py-0 justify-content-xl-between max-width-270 min-width-270">
+              <!-- Logo -->
+              <a class="order-1 order-xl-0 navbar-brand u-header__navbar-brand u-header__navbar-brand-center" href="{{ homepage_url }}" aria-label="Electro"><img src="{% static 'images/logo.png' %}" alt="" /></a>
+              <!-- End Logo -->
+
+              <!-- Hamburguer menu button start -->
+              <button id="sidebarHeaderInvokerMenu" type="button" class="navbar-toggler d-block btn u-hamburger mr-3 mr-xl-0" aria-controls="sidebarHeader" aria-haspopup="true" aria-expanded="false" data-unfold-event="click" data-unfold-hide-on-scroll="false" data-unfold-target="#sidebarHeader1" data-unfold-type="css-animation" data-unfold-animation-in="fadeInLeft" data-unfold-animation-out="fadeOutLeft" data-unfold-duration="500"><span id="hamburgerTriggerMenu" class="u-hamburger__box"><span class="u-hamburger__inner"></span></span></button>
+              <!-- Hamburguer menu button end -->
+            </nav>
+          </div>
+          <!-- Menú principal start -->
+          <div class="col d-none d-xl-block">
+            <nav class="js-mega-menu navbar navbar-expand-md u-header__navbar u-header__navbar--no-space">
+              <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
+                <ul class="navbar-nav u-header__navbar-nav">
+                  <!-- Home -->
+                  {% for option in menu %}
+                    {% if option.url %}
+                      <li class="nav-item u-header__nav-item">
+                        <a class="nav-link u-header__nav-link" href="{% url option.url %}">{{ option.name }}</a>
+                      </li>
+                    {% elif option.product %}
+                      <li class="nav-item u-header__nav-item">
+                        <a class="nav-link u-header__nav-link" href="{{ option.product.get_absolute_url }}">{{ option.product }}</a>
+                      </li>
+                    {% elif option.category %}
+                      <li class="nav-item hs-has-sub-menu u-header__nav-item" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut">
+                        <a id="blogMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="{{ option.category.get_absolute_url }}" aria-haspopup="true" aria-expanded="false" aria-labelledby="blogSubMenu">{{ option.category }}</a>
+
+                        <ul id="blogSubMenu" class="hs-sub-menu u-header__sub-menu" aria-labelledby="blogMegaMenu" style="min-width: 230px;">
+                          {% for child_category in option.category.get_descendants %}
+                            <li>
+                              <a class="nav-link u-header__sub-menu-nav-link" href="{{ child_category.get_absolute_url }}">{{ child_category.name }}</a>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <!-- Menú principal end -->
+          <!-- Customer Care start -->
+          <div class="d-none d-xl-block col-md-auto">
+            <div class="d-flex">
+              <i class="ec ec-support font-size-50 text-primary"></i>
+              <div class="ml-2">
+                <div class="phone">
+                  <strong>Teléfono:</strong> <a href="tel:8114771790" class="text-gray-90">{{ telefono }}</a>
+                </div>
+                <div class="email">
+                  <strong>E-mail</strong>: <a href="mailto:soporte@bi-tecnologia.com" class="text-gray-90">{{ email }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Customer Care end -->
+          <!-- Icons for small widths start -->
+          <div class="d-xl-none col col-xl-auto text-right text-xl-left pl-0 pl-xl-3 position-static">
+            <div class="d-inline-flex">
+              <ul class="d-flex list-unstyled mb-0 align-items-center">
+                <!-- Search start -->
+                <li class="col d-xl-none px-2 px-sm-3 position-static">
+                  <a id="searchClassicInvoker" class="font-size-22 text-gray-90 text-lh-1 btn-text-secondary" href="javascript:;" role="button" data-toggle="tooltip" data-placement="top" title="Search" aria-controls="searchClassic" aria-haspopup="true" aria-expanded="false" data-unfold-target="#searchClassic" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-delay="300" data-unfold-hide-on-scroll="true" data-unfold-animation-in="slideInUp" data-unfold-animation-out="fadeOut"><span class="ec ec-search"></span></a>
+                  <div id="searchClassic" class="dropdown-menu dropdown-unfold dropdown-menu-right left-0 mx-2" aria-labelledby="searchClassicInvoker">
+                    <form class="js-focus-state input-group px-3" method="GET" action="{% url 'search:search' %}">
+                      <input class="form-control" type="search" name="q" id="searchProduct" placeholder="Buscar en Catálogo" aria-label="Buscar en Catálogo" aria-describedby="searchProduct1" required />
+                      <div class="input-group-append">
+                        <button class="btn btn-primary px-3" type="submit" id="searchProduct1"><i class="font-size-18 ec ec-search"></i></button>
+                      </div>
+                    </form>
+                  </div>
+                </li>
+                <!-- Search end -->
+                <li class="col d-xl-none px-2 px-sm-3">
+                  <a href="{% url 'customer:summary' %}" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="My Account"><i class="font-size-22 ec ec-user"></i></a>
+                </li>
+                <li class="col pr-xl-0 px-2 px-sm-3">
+                  <a href="{% url 'basket:summary' %}" class="text-gray-90 position-relative d-flex" data-toggle="tooltip" data-placement="top" title="Cart">
+                    <i class="font-size-22 ec ec-shopping-bag"></i>
+                    <span class="width-22 height-22 bg-dark position-absolute d-flex align-items-center justify-content-center rounded-circle left-12 top-8 font-weight-bold font-size-12 text-white">{{ basket.num_items }}</span>
+                    <span class="d-none d-xl-block font-weight-bold font-size-16 text-gray-90 ml-3">${{ basket.total_incl_tax }}</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Icons for small widths end -->
+        </div>
+      </div>
+    </div>
+    <!-- End Logo and Menu -->
+
+    <div class="d-none d-xl-block bg-primary">
+      <div class="container">
+        <div class="row align-items-stretch min-height-50">
+          <!-- Hamburguer Menu start -->
+          <div class="col-md-auto d-none d-xl-flex align-items-end">
+            <div class="max-width-270 min-width-270">
+              <!-- Basics Accordion -->
+              <div id="basicsAccordion">
+                <!-- Card -->
+                <div class="card border-0 rounded-0">
+                  <div class="card-header bg-primary rounded-0 card-collapse border-0" id="basicsHeadingOne">
+                    <button type="button" class="btn-link btn-remove-focus btn-block d-flex card-btn py-3 text-lh-1 px-4 shadow-none btn-primary rounded-top-lg border-0 font-weight-bold text-gray-90" data-toggle="collapse" data-target="#basicsCollapseOne" aria-expanded="true" aria-controls="basicsCollapseOne">
+                      <span class="pl-1 text-gray-90">Caegorías</span>
+                      <span class="text-gray-90 ml-3"><span class="ec ec-arrow-down-search"></span></span>
+                    </button>
+                  </div>
+                  <div id="basicsCollapseOne" class="collapse show vertical-menu v1" aria-labelledby="basicsHeadingOne" data-parent="#basicsAccordion">
+                    <div class="card-body p-0">
+                      <nav class="js-mega-menu navbar navbar-expand-xl u-header__navbar u-header__navbar--no-space hs-menu-initialized">
+                        <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse">
+                          <ul class="navbar-nav u-header__navbar-nav border-primary border-top-0">
+                            <!-- TODO: Offer/Value of the day page -->
+                            <li class="nav-item u-header__nav-item" data-event="hover" data-position="left">
+                              <a href="#" class="nav-link u-header__nav-link font-weight-bold">Promoción del día</a>
+                            </li>
+                            <!-- Nav Item MegaMenu -->
+                            {% category_tree depth=1 as tree_categories %}
+                            {% for category in tree_categories %}
+                              <li class="nav-item hs-has-mega-menu u-header__nav-item" data-event="hover" data-animation-in="slideInUp" data-animation-out="fadeOut" data-position="left">
+                                <a id="basicMegaMenu" class="nav-link u-header__nav-link u-header__nav-link-toggle" href="{{ category.get_absolute_url }}" aria-haspopup="true" aria-expanded="false">{{ category.name }}</a>
+
+                                <!-- child categories start -->
+                                <div class="hs-mega-menu vmm-tfw u-header__sub-menu" aria-labelledby="basicMegaMenu">
+                                  <div class="vmm-bg">
+                                    <img class="img-fluid" src="{% static 'img/500X400/img1.png' %}" alt="Image Description" />
+                                  </div>
+                                  <div class="row u-header__mega-menu-wrapper">
+                                    <div class="col mb-3 mb-sm-0">
+                                      <span class="u-header__sub-menu-title">{{ category.name }}</span>
+                                      <ul class="u-header__sub-menu-nav-group mb-3">
+                                        {% for child_category in category.category.get_descendants %}
+                                          <li>
+                                            <a class="nav-link u-header__sub-menu-nav-link" href="{{ child_category.get_absolute_url }}">{{ child_category.name }}</a>
+                                          </li>
+                                        {% endfor %}
+                                      </ul>
+                                    </div>
+                                    <div class="col mb-3 mb-sm-0">
+                                      <span class="u-header__sub-menu-title">Secundario master 2</span>
+                                      <ul class="u-header__sub-menu-nav-group">
+                                        <li>
+                                          <a class="nav-link u-header__sub-menu-nav-link" href="#">Secundario child 1</a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- End Nav Item - Mega Menu -->
+                              </li>
+                              <!-- child categories end -->
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Card -->
+              </div>
+              <!-- End Basics Accordion -->
+            </div>
+          </div>
+          <!-- Hamburguer Menu end -->
+          <!-- Search bar start -->
+          <div class="col align-self-center">
+            <form class="js-focus-state" method="GET" action="{% url 'search:search' %}">
+              <label class="sr-only" for="searchProduct">Search</label>
+              <div class="input-group">
+                <input type="text" class="form-control py-2 pl-5 font-size-15 border-0 height-40 rounded-left-pill" name="q" id="searchProduct" placeholder="Buscar en Catálogo" aria-label="Buscar en Catálogo" aria-describedby="searchProduct1" required />
+                <div class="input-group-append">
+                  <button class="btn btn-dark height-40 py-2 px-3 rounded-right-pill" type="submit" id="searchProduct1"><span class="ec ec-search font-size-24"></span></button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Search bar end -->
+          <!-- Header Icons -->
+          <div class="col-md-auto align-self-center">
+            <div class="d-flex">
+              <ul class="d-flex list-unstyled mb-0">
+                <li class="col">
+                  <a href="{% url 'customer:wishlists-list' %}" class="text-gray-90" data-toggle="tooltip" data-placement="top" title="Favorites"><i class="font-size-22 ec ec-favorites"></i></a>
+                </li>
+                <li class="col pr-0">
+                  <a href="{% url 'basket:summary' %}" class="text-gray-90 position-relative d-flex" data-toggle="tooltip" data-placement="top" title="Cart">
+                    <i class="font-size-22 ec ec-shopping-bag"></i>
+                    <span class="width-22 height-22 bg-dark position-absolute flex-content-center text-white rounded-circle left-12 top-8 font-weight-bold font-size-12">{{ basket.num_items }}</span>
+                    <span class="font-weight-bold font-size-16 text-gray-90 ml-3">${{ basket.total_incl_tax }}</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Header Icons -->
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
-<!-- ========== END HEADER ========== -->
+<!-- ========== END HEADER ========== --> {% endcomment %}
