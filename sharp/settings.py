@@ -241,6 +241,8 @@ BUSINESS_TELEFONO = "(81)1477-1790"
 BUSINESS_EMAIL = "soporte@bi-tecnologia.com"
 BUSINESS_LOGO = "bit-logo.png"
 
+USE_THOUSAND_SEPARATOR = True
+
 OSCAR_DASHBOARD_NAVIGATION += [
     {
         "label": "Custom",
