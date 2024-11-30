@@ -1,5 +1,6 @@
 from django.db import models
-from oscar.apps.catalogue.models import Category, Product
+from oscar.apps.catalogue.models import Category
+from apps.catalogue.models import Product
 
 class Menu(models.Model):
     name = models.CharField(max_length=25, blank=True, null=True)

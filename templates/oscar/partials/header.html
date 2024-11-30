@@ -137,8 +137,16 @@
                                 </div>
                             {% else %}
                                 <a href="{{ menu_item.product.get_absolute_url}}" class="navigation__link">{{ menu_item }}</a>
-                                <div class="box-menu" style="width: 200px;">
-                                    <img src="images/{{ menu_item.product.primary_image.original }}" alt="">
+                                <div class="box-menu" style="width: 400px;">
+                                    {% comment %} <img src="images/{{ menu_item.product.primary_image.original }}" alt=""> {% endcomment %}
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="images/{{ menu_item.product.primary_image.original }}" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">{{ menu_item.product }}</h5>
+                                          <p class="card-text">{{ menu_item.product.short_description }}</p>
+                                          <a href="#" class="btn btn-primary">Ver Detalle</a>
+                                        </div>
+                                      </div>
                                 </div>
                             {% endif %}
                             

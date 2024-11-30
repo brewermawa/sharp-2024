@@ -1123,7 +1123,8 @@ progress {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  /* border: 1px solid rgba(0, 0, 0, 0.125); */
+  border: 0;
   border-radius: 0.25rem; }
   .card > hr {
     margin-right: 0;
@@ -9597,8 +9598,8 @@ img {
 
 .btn-primary {
   color: #fff;
-  background-color: #222222;
-  border-color: #222222;
+  background-color: #0046be;
+  border-color: #0046be;
   box-shadow: none; }
   .btn-primary:hover {
     color: #fff;

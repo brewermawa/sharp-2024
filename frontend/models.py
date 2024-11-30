@@ -1,5 +1,6 @@
 from django.db import models
-from oscar.apps.catalogue.models import Category, Product
+from oscar.apps.catalogue.models import Category
+from apps.catalogue.models import Product
 
 
 class Slider(models.Model):
