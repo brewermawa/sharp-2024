@@ -8,7 +8,7 @@ Promo = get_model("frontend", "Promo")
 class DashboardSliderCreateUpdateForm(forms.ModelForm):
     class Meta:
         model = Slider
-        fields = ("name", "image", "title", "message", "button_text", "url", "category", "product", )
+        fields = ("name", "image", "title", "message", "message2", "button_text", "url", "category", "product", )
 
 
 class DashboardPromoCreateUpdateForm(forms.ModelForm):
