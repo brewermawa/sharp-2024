@@ -14,7 +14,7 @@ class CatalogueView(BaseCatalogueView):
         ctx["summary"] = "All products"
         ctx["sliders"] = Slider.objects.all()
         ctx["promos"] = Promo.objects.all()
-        ctx["feautured"] = Range.objects.get(name="feautured").all_products()
+        ctx["featured"] = Range.objects.get(name="featured").all_products()
         search_context = self.search_handler.get_search_context_data(
             self.context_object_name
         )

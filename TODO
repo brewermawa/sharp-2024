@@ -1,7 +1,7 @@
-TODO: Sliders
-TODO: El mensaje del slider debe estar dividido en 2 renglones, agregar segundo renglón al modelo
-TODO: Agregar un tercer mensaje para anunciar precio en slider. Lo correcto sería que si el slider es un producto, mostrar el precio del producto.
-TODO: Hacer más grande el texto del button_text del slider
+TODO: Promotions: Oscar does have offers but they are conditionally applied at the cart level.
+      I need a way to discount a product directly such that the discounted price is shown on the product detail page and on any page listing the product (eg. category page) and when the product is added to the cart, the discounted price is used. The original price should also be shown for reference.
+
+
 TODO: In the header, when there is a click on the cart icon, the UOMO theme shows a sidebar with the cart items. We have to fill this sidebar with the cart information
 TODO: Login form in aside when clicking account icon
 TODO: Sitemap
@@ -9,7 +9,6 @@ TODO: Load real info in the database
 TODO: Add RFC to customer
 TODO: Create about us page
 TODO: Create contact page
-TODO: What is the max-width that the template uses
 MAYBE: Compare icon on header
 
 
@@ -69,3 +68,6 @@ A slider has 4 components:
  url
 
  DONE: Promo Banners - Will need to make an app alot like the slider custom app
+ DONO: Sliders
+ DONE: El mensaje del slider debe estar dividido en 2 renglones, agregar segundo renglón al modelo
+ DONE: Agregar un tercer mensaje para anunciar precio en slider. Lo correcto sería que si el slider es un producto, mostrar el precio del producto.
