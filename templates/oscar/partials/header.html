@@ -1,6 +1,6 @@
 {% load static %}
 {% load category_tags %}
-{% load basket_tags %}
+{% load basket_tags %} 
 
 <!-- Header start -->
 {% comment %} <header id="header" class="header sticky_disabled w-100"> {% endcomment %}
@@ -8,13 +8,14 @@
     <!-- Top Bar start -->
     <div class="header-top bordered">
         <div class="container d-flex align-items-center">
-            <ul class="list-unstyled d-flex flex-1 gap-3 m-0">
+            {{ shop_tagline }}
+            {% comment %} <ul class="list-unstyled d-flex flex-1 gap-3 m-0">
                 <li><a href="#" class="menu-link menu-link_us-s">Shipping</a></li>
                 <li><a href="#" class="menu-link menu-link_us-s">FAQ</a></li>
                 <li><a href="./contact.html" class="menu-link menu-link_us-s">Contact</a></li>
                 <li><a href="#" class="menu-link menu-link_us-s">Track Order</a></li>
-            </ul>
-            <p class="mx-auto mb-0 d-none d-xl-block">{{ shop_tagline }}</p>
+            </ul> {% endcomment %}
+            {% comment %} <p class="mx-auto mb-0 d-none d-xl-block">{{ shop_tagline }}</p> {% endcomment %}
             {% comment %} <div class="heeader-top__right flex-1 d-flex gap-1 justify-content-end">
                 <ul class="social-links list-unstyled d-flex flex-wrap mb-0">
                     <li>
@@ -106,7 +107,7 @@
             <div class="container d-flex align-items-center">
                 <!-- Categories start -->
                 <div class="categories-nav position-relative">
-                    <h3 class="categories-nav__title">Browse Categories</h3>
+                    <h3 class="categories-nav__title">Categorías</h3>
                     <ul class="categories-nav__list list-unstyled">
                         {% category_tree depth=1 as main_categories %}
                         {% for parent_category in main_categories %}

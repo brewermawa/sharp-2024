@@ -2,6 +2,7 @@
 
 {% load static %}
 {% load purchase_info_tags %}
+{% load category_tags %}
 
 {% block content %}
 
@@ -64,9 +65,9 @@
     </div>
     <!-- Slider end -->
 
-    <div class="mb-3 mb-xl-5 pb-3 pt-1 pb-xl-5">{{ featured }}</div>
+    <div class="mb-3 mb-xl-5 pb-3 pt-1 pb-xl-5"></div>
 
-    <!-- Offer Carousel Section start -->
+    <!-- Ofertas del mes carousel Section start -->
     <section class="products-carousel container">
         <!-- Carousel Title start -->
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3 pb-xl-2 mb-xl-4">
@@ -116,147 +117,44 @@
                 }
             }'>
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide product-card product-card_style8">
-                        <div class="pc__img-wrapper pc__img-wrapper_wide2">
-                            <a href="./product1_simple.html">
-                            <img loading="lazy" src="../images/home/demo11/product-1.jpg" width="252" height="229" alt="" class="pc__img">
-                            </a>
-                        </div><!-- /.pc__img-wrapper -->
-
-                        <div class="pc__info position-relative">
-                            <p class="pc__category">Television &amp; Video</p>
-                            <h6 class="pc__title"><a href="./product1_simple.html">Fire TV Stick 4K streaming device with Alexa built in</a></h6>
-                            <div class="product-card__review d-sm-flex align-items-center">
-                                <div class="reviews-group d-flex">
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                </div>
-                                <span class="reviews-note text-lowercase text-secondary ms-sm-1">321,975</span>
+                    <!-- Offer product begin -->
+                    <!-- Aqui estoy trabajando -->
+                    {% for product in featured %}
+                        <div class="swiper-slide product-card product-card_style8">
+                            <div class="pc__img-wrapper pc__img-wrapper_wide2">
+                                <a href="{{ product.get_absolute_url }}"><img loading="lazy" src="images/{{ product.primary_image.original }}" width="252" height="229" alt="" class="pc__img"></a>
                             </div>
 
-                            <div class="product-card__price d-flex mb-2">
-                                <span class="money price fs-5">$35.90</span>
-                            </div>
-
-                            <div class="product-card__countdown">
-                                <div class="text-secondary d-flex align-items-center gap-1 mb-1">
-                                    <span>Ends in</span>
-                                    <div class="position-relative d-flex align-items-center text-center color-secondary js-countdown" data-date="18-5-2024" data-time="06:50">
-                                    <div class="day countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>d&nbsp;</span>
-                                    <div class="hour countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>:</span>
-                                    <div class="min countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>:</span>
-                                    <div class="sec countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    </div>
+                            <div class="pc__info position-relative">
+                                <p class="pc__category">{{ product.get_categories.last }}</p>
+                                <h6 class="pc__title"><a href="{{ product.get_absolute_url }}">{{ product }}</a></h6>
+                                <div class="product-card__price d-flex mb-2">
+                                    <span class="money price fs-5">
+                                        {% purchase_info_for_product request product as current_product %}
+                                        ${{ current_product.price.incl_tax }}
+                                    </span>
                                 </div>
-                                <div class="progress progress_uomo progress_uomo_small mb-2">
-                                    <div class="progress-bar theme-bg-color-secondary" role="progressbar" style="width: 40%;" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="product-card__review d-sm-flex align-items-center">
+                                    {% with product.calculate_rating as rating %}                                    
+                                        {% if rating is not None %}
+                                            <div class="reviews-group d-flex">
+                                                {% for i in "x"|rjust:rating %}
+                                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
+                                                {% endfor %}
+                                                {% for i in "x"|rjust:product.calculate_non_rating %}
+                                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z" fill="#D3D3D3"></path></svg>
+                                                {% endfor %}
+                                            </div>
+                                            <span class="reviews-note text-lowercase text-secondary ms-sm-1">{{ product.num_approved_reviews }} reseña{{ product.num_approved_reviews|pluralize }}</span>
+                                        {% else %}
+                                            <div class="reviews-group d-flex">&nbsp;</div>
+                                        {% endif %}
+                                    {% endwith %}
                                 </div>
-                                <div class="text-secondary d-flex align-items-center justify-content-between gap-2">
-                                    <div>Available: <span class="text-primary">6</span></div>
-                                    <div>Already Sold: <span class="text-primary">28</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide product-card product-card_style8">
-                        <div class="pc__img-wrapper pc__img-wrapper_wide2">
-                            <a href="./product1_simple.html">
-                            <img loading="lazy" src="../images/home/demo11/product-2.jpg" width="252" height="229" alt="" class="pc__img">
-                            </a>
-                        </div><!-- /.pc__img-wrapper -->
-
-                        <div class="pc__info position-relative">
-                            <p class="pc__category">Television &amp; Video</p>
-                            <h6 class="pc__title"><a href="./product1_simple.html">Letsfit Smart Watch, Fitness Tracker with Heart Rate</a></h6>
-                            <div class="product-card__review d-sm-flex align-items-center">
-                                <div class="reviews-group d-flex">
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                </div>
-                                <span class="reviews-note text-lowercase text-secondary ms-sm-1">321,975</span>
-                            </div>
-
-                            <div class="product-card__price d-flex mb-2">
-                                <span class="money price fs-5">$79.99</span>
-                            </div>
-
-                            <div class="product-card__countdown">
-                                <div class="text-secondary d-flex align-items-center gap-1 mb-1">
-                                    <span>Ends in</span>
-                                    <div class="position-relative d-flex align-items-center text-center color-secondary js-countdown" data-date="18-5-2024" data-time="06:50">
-                                    <div class="day countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>d&nbsp;</span>
-                                    <div class="hour countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>:</span>
-                                    <div class="min countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>:</span>
-                                    <div class="sec countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    </div>
-                                </div>
-                                <div class="progress progress_uomo progress_uomo_small mb-2">
-                                    <div class="progress-bar theme-bg-color-secondary" role="progressbar" style="width: 40%;" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="text-secondary d-flex align-items-center justify-content-between gap-2">
-                                    <div>Available: <span class="text-primary">6</span></div>
-                                    <div>Already Sold: <span class="text-primary">28</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide product-card product-card_style8">
-                        <div class="pc__img-wrapper pc__img-wrapper_wide2">
-                            <a href="./product1_simple.html">
-                            <img loading="lazy" src="../images/home/demo11/product-3.jpg" width="252" height="229" alt="" class="pc__img">
-                            </a>
-                        </div>
-
-                        <div class="pc__info position-relative">
-                            <p class="pc__category">Television &amp; Video</p>
-                            <h6 class="pc__title"><a href="./product1_simple.html">Acer Aspire 5 Slim Laptop, 15.6 inches Full HD IPS</a></h6>
-                            <div class="product-card__review d-sm-flex align-items-center">
-                                <div class="reviews-group d-flex">
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                </div>
-                                <span class="reviews-note text-lowercase text-secondary ms-sm-1">321,975</span>
-                            </div>
-
-                            <div class="product-card__price d-flex mb-2">
-                                <span class="money price fs-5">$929.00</span>
-                            </div>
-
-                            <div class="product-card__countdown">
-                                <div class="text-secondary d-flex align-items-center gap-1 mb-1">
-                                    <span>Ends in</span>
-                                    <div class="position-relative d-flex align-items-center text-center color-secondary js-countdown" data-date="18-5-2024" data-time="06:50">
+                                {% comment %} <div class="product-card__countdown">
+                                    <div class="text-secondary d-flex align-items-center gap-1 mb-1">
+                                        <span>Ends in</span>
+                                        <div class="position-relative d-flex align-items-center text-center color-secondary js-countdown" data-date="18-5-2024" data-time="06:50">
                                         <div class="day countdown-unit">
                                             <span class="countdown-num d-block"></span>
                                         </div>
@@ -272,410 +170,20 @@
                                         <div class="sec countdown-unit">
                                             <span class="countdown-num d-block"></span>
                                         </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="progress progress_uomo progress_uomo_small mb-2">
-                                    <div class="progress-bar theme-bg-color-secondary" role="progressbar" style="width: 40%;" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="text-secondary d-flex align-items-center justify-content-between gap-2">
-                                    <div>Available: <span class="text-primary">6</span></div>
-                                    <div>Already Sold: <span class="text-primary">28</span></div>
-                                </div>
+                                    <div class="progress progress_uomo progress_uomo_small mb-2">
+                                        <div class="progress-bar theme-bg-color-secondary" role="progressbar" style="width: 40%;" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="text-secondary d-flex align-items-center justify-content-between gap-2">
+                                        <div>Available: <span class="text-primary">6</span></div>
+                                        <div>Already Sold: <span class="text-primary">28</span></div>
+                                    </div>
+                                </div> {% endcomment %}
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide product-card product-card_style8">
-                        <div class="pc__img-wrapper pc__img-wrapper_wide2">
-                            <a href="./product1_simple.html">
-                            <img loading="lazy" src="../images/home/demo11/product-4.jpg" width="252" height="229" alt="" class="pc__img">
-                            </a>
-                        </div><!-- /.pc__img-wrapper -->
-
-                        <div class="pc__info position-relative">
-                            <p class="pc__category">Television &amp; Video</p>
-                            <h6 class="pc__title"><a href="./product1_simple.html">Apple iPhone 11 Pro Max (64GB, Midnight Green)</a></h6>
-                            <div class="product-card__review d-sm-flex align-items-center">
-                                <div class="reviews-group d-flex">
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                </div>
-                                <span class="reviews-note text-lowercase text-secondary ms-sm-1">321,975</span>
-                            </div>
-
-                            <div class="product-card__price d-flex mb-2">
-                                <span class="money price fs-5">$729.00</span>
-                            </div>
-
-                            <div class="product-card__countdown">
-                                <div class="text-secondary d-flex align-items-center gap-1 mb-1">
-                                    <span>Ends in</span>
-                                    <div class="position-relative d-flex align-items-center text-center color-secondary js-countdown" data-date="18-5-2024" data-time="06:50">
-                                    <div class="day countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>d&nbsp;</span>
-                                    <div class="hour countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>:</span>
-                                    <div class="min countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>:</span>
-                                    <div class="sec countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress progress_uomo progress_uomo_small mb-2">
-                                <div class="progress-bar theme-bg-color-secondary" role="progressbar" style="width: 40%;" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="text-secondary d-flex align-items-center justify-content-between gap-2">
-                                <div>Available: <span class="text-primary">6</span></div>
-                                <div>Already Sold: <span class="text-primary">28</span></div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide product-card product-card_style8">
-                        <div class="pc__img-wrapper pc__img-wrapper_wide2">
-                            <a href="./product1_simple.html">
-                            <img loading="lazy" src="../images/home/demo11/product-5.jpg" width="252" height="229" alt="" class="pc__img">
-                            </a>
-                        </div><!-- /.pc__img-wrapper -->
-
-                        <div class="pc__info position-relative">
-                            <p class="pc__category">Television &amp; Video</p>
-                            <h6 class="pc__title"><a href="./product1_simple.html">DJI Mavic Mini - Drone FlyCam Quadcopter UAV</a></h6>
-                            <div class="product-card__review d-sm-flex align-items-center">
-                                <div class="reviews-group d-flex">
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                </div>
-                                <span class="reviews-note text-lowercase text-secondary ms-sm-1">321,975</span>
-                            </div>
-
-                            <div class="product-card__price d-flex mb-2">
-                                <span class="money price fs-5">$399.00</span>
-                            </div>
-
-                            <div class="product-card__countdown">
-                                <div class="text-secondary d-flex align-items-center gap-1 mb-1">
-                                    <span>Ends in</span>
-                                    <div class="position-relative d-flex align-items-center text-center color-secondary js-countdown" data-date="18-5-2024" data-time="06:50">
-                                    <div class="day countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>d&nbsp;</span>
-                                    <div class="hour countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>:</span>
-                                    <div class="min countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>:</span>
-                                    <div class="sec countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    </div>
-                                </div>
-                            <div class="progress progress_uomo progress_uomo_small mb-2">
-                                <div class="progress-bar theme-bg-color-secondary" role="progressbar" style="width: 40%;" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                                <div class="text-secondary d-flex align-items-center justify-content-between gap-2">
-                                    <div>Available: <span class="text-primary">6</span></div>
-                                    <div>Already Sold: <span class="text-primary">28</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide product-card product-card_style8">
-                        <div class="pc__img-wrapper pc__img-wrapper_wide2">
-                            <a href="./product1_simple.html">
-                            <img loading="lazy" src="../images/home/demo11/product-1.jpg" width="252" height="229" alt="" class="pc__img">
-                            </a>
-                        </div><!-- /.pc__img-wrapper -->
-
-                        <div class="pc__info position-relative">
-                            <p class="pc__category">Television &amp; Video</p>
-                            <h6 class="pc__title"><a href="./product1_simple.html">Fire TV Stick 4K streaming device with Alexa built in</a></h6>
-                            <div class="product-card__review d-sm-flex align-items-center">
-                                <div class="reviews-group d-flex">
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                </div>
-                                <span class="reviews-note text-lowercase text-secondary ms-sm-1">321,975</span>
-                            </div>
-
-                            <div class="product-card__price d-flex mb-2">
-                                <span class="money price fs-5">$35.90</span>
-                            </div>
-
-                            <div class="product-card__countdown">
-                                <div class="text-secondary d-flex align-items-center gap-1 mb-1">
-                                    <span>Ends in</span>
-                                    <div class="position-relative d-flex align-items-center text-center color-secondary js-countdown" data-date="18-5-2024" data-time="06:50">
-                                        <div class="day countdown-unit">
-                                            <span class="countdown-num d-block"></span>
-                                        </div>
-                                        <span>d&nbsp;</span>
-                                        <div class="hour countdown-unit">
-                                            <span class="countdown-num d-block"></span>
-                                        </div>
-                                        <span>:</span>
-                                        <div class="min countdown-unit">
-                                            <span class="countdown-num d-block"></span>
-                                        </div>
-                                        <span>:</span>
-                                        <div class="sec countdown-unit">
-                                            <span class="countdown-num d-block"></span>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="progress progress_uomo progress_uomo_small mb-2">
-                                <div class="progress-bar theme-bg-color-secondary" role="progressbar" style="width: 40%;" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="text-secondary d-flex align-items-center justify-content-between gap-2">
-                                <div>Available: <span class="text-primary">6</span></div>
-                                <div>Already Sold: <span class="text-primary">28</span></div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide product-card product-card_style8">
-                        <div class="pc__img-wrapper pc__img-wrapper_wide2">
-                            <a href="./product1_simple.html">
-                            <img loading="lazy" src="../images/home/demo11/product-2.jpg" width="252" height="229" alt="" class="pc__img">
-                            </a>
-                        </div><!-- /.pc__img-wrapper -->
-
-                        <div class="pc__info position-relative">
-                            <p class="pc__category">Television &amp; Video</p>
-                            <h6 class="pc__title"><a href="./product1_simple.html">Letsfit Smart Watch, Fitness Tracker with Heart Rate</a></h6>
-                            <div class="product-card__review d-sm-flex align-items-center">
-                                <div class="reviews-group d-flex">
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                </div>
-                                <span class="reviews-note text-lowercase text-secondary ms-sm-1">321,975</span>
-                            </div>
-
-                            <div class="product-card__price d-flex mb-2">
-                                <span class="money price fs-5">$79.99</span>
-                            </div>
-
-                            <div class="product-card__countdown">
-                            <div class="text-secondary d-flex align-items-center gap-1 mb-1">
-                                <span>Ends in</span>
-                                <div class="position-relative d-flex align-items-center text-center color-secondary js-countdown" data-date="18-5-2024" data-time="06:50">
-                                <div class="day countdown-unit">
-                                    <span class="countdown-num d-block"></span>
-                                </div>
-                                <span>d&nbsp;</span>
-                                <div class="hour countdown-unit">
-                                    <span class="countdown-num d-block"></span>
-                                </div>
-                                <span>:</span>
-                                <div class="min countdown-unit">
-                                    <span class="countdown-num d-block"></span>
-                                </div>
-                                <span>:</span>
-                                <div class="sec countdown-unit">
-                                    <span class="countdown-num d-block"></span>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="progress progress_uomo progress_uomo_small mb-2">
-                                <div class="progress-bar theme-bg-color-secondary" role="progressbar" style="width: 40%;" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="text-secondary d-flex align-items-center justify-content-between gap-2">
-                                <div>Available: <span class="text-primary">6</span></div>
-                                <div>Already Sold: <span class="text-primary">28</span></div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide product-card product-card_style8">
-                        <div class="pc__img-wrapper pc__img-wrapper_wide2">
-                            <a href="./product1_simple.html">
-                            <img loading="lazy" src="../images/home/demo11/product-3.jpg" width="252" height="229" alt="" class="pc__img">
-                            </a>
-                        </div><!-- /.pc__img-wrapper -->
-
-                        <div class="pc__info position-relative">
-                            <p class="pc__category">Television &amp; Video</p>
-                            <h6 class="pc__title"><a href="./product1_simple.html">Acer Aspire 5 Slim Laptop, 15.6 inches Full HD IPS</a></h6>
-                            <div class="product-card__review d-sm-flex align-items-center">
-                                <div class="reviews-group d-flex">
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                </div>
-                                <span class="reviews-note text-lowercase text-secondary ms-sm-1">321,975</span>
-                            </div>
-
-                            <div class="product-card__price d-flex mb-2">
-                            <span class="money price fs-5">$929.00</span>
-                            </div>
-
-                            <div class="product-card__countdown">
-                                <div class="text-secondary d-flex align-items-center gap-1 mb-1">
-                                    <span>Ends in</span>
-                                    <div class="position-relative d-flex align-items-center text-center color-secondary js-countdown" data-date="18-5-2024" data-time="06:50">
-                                    <div class="day countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>d&nbsp;</span>
-                                    <div class="hour countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>:</span>
-                                    <div class="min countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>:</span>
-                                    <div class="sec countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress progress_uomo progress_uomo_small mb-2">
-                                <div class="progress-bar theme-bg-color-secondary" role="progressbar" style="width: 40%;" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="text-secondary d-flex align-items-center justify-content-between gap-2">
-                                <div>Available: <span class="text-primary">6</span></div>
-                                <div>Already Sold: <span class="text-primary">28</span></div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide product-card product-card_style8">
-                        <div class="pc__img-wrapper pc__img-wrapper_wide2">
-                            <a href="./product1_simple.html">
-                            <img loading="lazy" src="../images/home/demo11/product-4.jpg" width="252" height="229" alt="" class="pc__img">
-                            </a>
-                        </div><!-- /.pc__img-wrapper -->
-
-                        <div class="pc__info position-relative">
-                            <p class="pc__category">Television &amp; Video</p>
-                            <h6 class="pc__title"><a href="./product1_simple.html">Apple iPhone 11 Pro Max (64GB, Midnight Green)</a></h6>
-                            <div class="product-card__review d-sm-flex align-items-center">
-                                <div class="reviews-group d-flex">
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                </div>
-                                <span class="reviews-note text-lowercase text-secondary ms-sm-1">321,975</span>
-                            </div>
-
-                            <div class="product-card__price d-flex mb-2">
-                                <span class="money price fs-5">$729.00</span>
-                            </div>
-
-                            <div class="product-card__countdown">
-                                <div class="text-secondary d-flex align-items-center gap-1 mb-1">
-                                    <span>Ends in</span>
-                                    <div class="position-relative d-flex align-items-center text-center color-secondary js-countdown" data-date="18-5-2024" data-time="06:50">
-                                        <div class="day countdown-unit">
-                                            <span class="countdown-num d-block"></span>
-                                        </div>
-                                    <span>d&nbsp;</span>
-                                    <div class="hour countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>:</span>
-                                    <div class="min countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    <span>:</span>
-                                    <div class="sec countdown-unit">
-                                        <span class="countdown-num d-block"></span>
-                                    </div>
-                                    </div>
-                                </div>
-                                <div class="progress progress_uomo progress_uomo_small mb-2">
-                                    <div class="progress-bar theme-bg-color-secondary" role="progressbar" style="width: 40%;" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="text-secondary d-flex align-items-center justify-content-between gap-2">
-                                    <div>Available: <span class="text-primary">6</span></div>
-                                    <div>Already Sold: <span class="text-primary">28</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide product-card product-card_style8">
-                        <div class="pc__img-wrapper pc__img-wrapper_wide2">
-                            <a href="./product1_simple.html">
-                            <img loading="lazy" src="../images/home/demo11/product-5.jpg" width="252" height="229" alt="" class="pc__img">
-                            </a>
-                        </div><!-- /.pc__img-wrapper -->
-
-                        <div class="pc__info position-relative">
-                            <p class="pc__category">Television &amp; Video</p>
-                            <h6 class="pc__title"><a href="./product1_simple.html">DJI Mavic Mini - Drone FlyCam Quadcopter UAV</a></h6>
-                            <div class="product-card__review d-sm-flex align-items-center">
-                                <div class="reviews-group d-flex">
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                    <svg class="review-star" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><path d="M4.0172 0.313075L2.91869 2.64013L0.460942 3.0145C0.0201949 3.08129 -0.15644 3.64899 0.163185 3.97415L1.94131 5.78447L1.52075 8.34177C1.44505 8.80402 1.91103 9.15026 2.30131 8.93408L4.5 7.72661L6.69869 8.93408C7.08897 9.14851 7.55495 8.80402 7.47925 8.34177L7.05869 5.78447L8.83682 3.97415C9.15644 3.64899 8.97981 3.08129 8.53906 3.0145L6.08131 2.64013L4.9828 0.313075C4.78598 -0.101718 4.2157 -0.10699 4.0172 0.313075Z"></path></svg>
-                                </div>
-                                <span class="reviews-note text-lowercase text-secondary ms-sm-1">321,975</span>
-                            </div>
-
-                            <div class="product-card__price d-flex mb-2">
-                                <span class="money price fs-5">$399.00</span>
-                            </div>
-
-                            <div class="product-card__countdown">
-                                <div class="text-secondary d-flex align-items-center gap-1 mb-1">
-                                    <span>Ends in</span>
-                                    <div class="position-relative d-flex align-items-center text-center color-secondary js-countdown" data-date="18-5-2024" data-time="06:50">
-                                        <div class="day countdown-unit">
-                                            <span class="countdown-num d-block"></span>
-                                        </div>
-                                        <span>d&nbsp;</span>
-                                        <div class="hour countdown-unit">
-                                            <span class="countdown-num d-block"></span>
-                                        </div>
-                                        <span>:</span>
-                                        <div class="min countdown-unit">
-                                            <span class="countdown-num d-block"></span>
-                                        </div>
-                                        <span>:</span>
-                                        <div class="sec countdown-unit">
-                                            <span class="countdown-num d-block"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="progress progress_uomo progress_uomo_small mb-2">
-                                    <div class="progress-bar theme-bg-color-secondary" role="progressbar" style="width: 40%;" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="text-secondary d-flex align-items-center justify-content-between gap-2">
-                                    <div>Available: <span class="text-primary">6</span></div>
-                                    <div>Already Sold: <span class="text-primary">28</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+                    <!-- Offer product end -->
                 </div>
             </div>
 
@@ -688,12 +196,12 @@
         </div>
         <!-- Carousel end -->
     </section>
-    <!-- Offer Carousel Section end -->
+    <!-- Ofertas del mes carousel Section end -->
 
     <div class="mb-3 mb-xl-5 pb-3 pt-1 pb-xl-5"></div>
 
     <!-- Category Promo start (only 3 categories/promos) -->
-    <section class="grid-banner container mb-3">
+    {% comment %} <section class="grid-banner container mb-3">
         <div class="row">
             <div class="col-lg-4">
                 <div class="grid-banner__item position-relative mb-3 border-radius-4">
@@ -726,7 +234,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> {% endcomment %}
     <!-- Category Promo end (only 3 categories/promos) -->
 
     <div class="mb-3 mb-xl-5 pb-3 pt-1 pb-xl-5"></div>
@@ -776,11 +284,20 @@
                 }
             }'>
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                <img loading="lazy" class="w-100 h-auto mb-3" src="../images/home/demo11/category_1.png" width="141" height="141" alt="">
-                <div class="text-center">
-                    <a href="#" class="menu-link fw-medium">Cellphones<br>& Tablets</a>
-                </div>
+                {% category_tree depth=1 as main_categories %}
+                {% for category in main_categories %}
+                    <div class="swiper-slide">
+                        <img loading="lazy" class="w-100 h-auto mb-3" src="images/{{ category.image }}" width="141" height="141" alt="">
+                        <div class="text-center">
+                            <a href="{{ category.get_absolute_url }}" class="menu-link fw-medium">{{ category.name }}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+                {% comment %} <div class="swiper-slide">
+                    <img loading="lazy" class="w-100 h-auto mb-3" src="../images/home/demo11/category_1.png" width="141" height="141" alt="">
+                    <div class="text-center">
+                        <a href="#" class="menu-link fw-medium">Cellphones<br>& Tablets</a>
+                    </div>
                 </div>
                 <div class="swiper-slide">
                 <img loading="lazy" class="w-100 h-auto mb-3" src="../images/home/demo11/category_2.png" width="141" height="141" alt="">
@@ -823,7 +340,7 @@
                 <div class="text-center">
                     <a href="#" class="menu-link fw-medium">Smart Home</a>
                 </div>
-                </div>
+                </div> {% endcomment %}
             </div><!-- /.swiper-wrapper -->
             </div><!-- /.swiper-container js-swiper-slider -->
 
@@ -832,7 +349,7 @@
         </div><!-- /.position-relative -->
     </section>
 
-    <div class="mb-3 mb-xl-5 pb-3 pt-1 pb-xl-5"></div>
+    <div class="mb-3 mb-xl-5 pb-3 pt-1 pb-xl-5">---</div>
 
     <!-- Best Sellers start -->
     <section class="best-sellers border-top-1">
@@ -3531,7 +3048,7 @@
 
     <div class="mb-3 mb-xl-5 pb-3 pb-xl-5"></div>
 
-    <!-- Servico Offers start -->
+    <!-- Service Offers start -->
     <section class="service-promotion horizontal border-top-1">
         <div class="container">
             <div class="mb-3 pb-3 mb-xl-4 pt-1"></div>
@@ -3571,7 +3088,7 @@
             <div class="mb-3 pb-3 mb-xl-4 pt-1"></div>
         </div>
     </section>
-    <!-- Servico Offers end -->
+    <!-- Service Offers end -->
 </main>
 
 <!-- Footer start -->

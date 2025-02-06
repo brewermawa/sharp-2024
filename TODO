@@ -1,3 +1,6 @@
+TODO: In the Feautured Categories section make the image be a link to the category page (right now only the category name in clickable)
+TODO: In the Feautured Categories fix the images and add a circle around them as in the original template
+
 TODO: Promotions: Oscar does have offers but they are conditionally applied at the cart level.
       I need a way to discount a product directly such that the discounted price is shown on the product detail page and on any page listing the product (eg. category page) and when the product is added to the cart, the discounted price is used. The original price should also be shown for reference.
 
@@ -71,3 +74,4 @@ A slider has 4 components:
  DONO: Sliders
  DONE: El mensaje del slider debe estar dividido en 2 renglones, agregar segundo renglón al modelo
  DONE: Agregar un tercer mensaje para anunciar precio en slider. Lo correcto sería que si el slider es un producto, mostrar el precio del producto.
+ DONE: Ratings. I already show the "positive" stars for the product rating, show the remaining stars (gray)
